@@ -408,7 +408,7 @@ function convertToEmote(msg) {
       ];
     var monochromeColor = [0],
         lightColor = [4,29,24,8,25,10,26,27,3,2],
-        normalColor = [15,5,7,9,18,20,11,13,21,1],
+        normalColor = [15,5,7,9,18,11,20,13,21,1],
         darkColor = [23,6,22,16,17,12,19,14,28,30];
     function ve(e) {
       for (var t = n, r = 0; r < se["length"]; r++) if (fe[r] == e) return r;
@@ -515,9 +515,9 @@ function convertToEmote(msg) {
     function it(e, t) {
       var r = n;
       (rt = e),
-        (at = Math.round(100 * rt) / 100);
-        at = Math.min(Math.max(at, 0.5), 3);
-        localStorage["setItem"]("zoom", Math.min(Math.max(at, 0.5), 3)),
+        (at = Math.round(25 * rt) / 25);
+        at = Math.min(Math.max(at, 0.01), 10);
+        localStorage["setItem"]("zoom", Math.min(Math.max(at, 0.01), 10)),
         (ot["value"] = 10 * at),
         t && ir(Math["round"](100 * at) + "%", 1e3),
         kn();
@@ -526,7 +526,7 @@ function convertToEmote(msg) {
       var r = n;
       (rt = e),
         (decimal = Math.round(100 * rt) / 100);
-        save && localStorage["setItem"]("zoom", Math.min(Math.max(decimal, 0.5), 3)),
+        save && localStorage["setItem"]("zoom", Math.min(Math.max(decimal, 0.01), 10)),
         (ot["value"] = 10 * decimal),
         showUser && ir(Math["round"](100 * decimal) + "%", 1e3),
         kn();
@@ -3193,7 +3193,7 @@ function convertToEmote(msg) {
                     Jr(e.touches[0]["pageY"] - e["touches"][1]["pageY"])
                 );
                 0 != jn &&
-                  it(Math.max(Math.min(rt - (jn - r) / 300, 3), 0.5), !0),
+                  it(Math.max(Math.min(rt - (jn - r) / 1000, 3), 0.01), !0),
                   (Dn = void 0),
                   (jn = r);
               }
