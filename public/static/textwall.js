@@ -1767,7 +1767,7 @@ function convertToEmote(msg) {
             case 66:
               e.ctrlKey && (e["preventDefault"](), br("bold"), ie(!0));
               break;
-            case 50:
+            case 79:
               e.ctrlKey && (e["preventDefault"](), br("overline"), ie(!0));
               break;
             case 73:
