@@ -2360,8 +2360,8 @@ function convertToEmote(msg) {
         (l.style["color"] = "#ffffff" == se[color] ? "#222222" : se[color]),
         registered &&
           ((l["href"] = "/@" + name), l.onclick = wn), // teleportTo is not defined glitch just doesnt know it right 
-        (l.title = "[" + id);
-      ir(name + ": " + name)
+        (l.title = "Anon " + id);
+      ir(name + ": " + message)
       s.innerText = message;
       c["appendChild"](l),
       c.appendChild(document.createTextNode(": ")),
@@ -4727,10 +4727,10 @@ document.addEventListener("keydown", function (event) {
 });
 var owner = document.getElementById("owner");
 function checkAdminWall(wall) {
-  if (["@Richard","@ThatRedmiNoteGuy","@317"].includes(wall)) {
+  if (["@ollet", "AbECilpOzKaj0347", "@richard"].includes(wall)) {
     owner.classList.remove("hidden");
     owner.title = `This user is the ${
-      wall == "@317" ? "co-" : ""
+      wall == "richard" ? "co-" : ""
     }owner of RichardWall`;
   } else {
     owner.classList.add("hidden");
