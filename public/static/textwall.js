@@ -1497,6 +1497,17 @@ function convertToEmote(msg) {
           document["getElementById"](o[a])["value"] = "";
       }
     }
+    function convertToTextwall(copied) {
+        var splitting = copied.split("�");
+        var twDecolor = splitting[1].split(",");
+        var result = "";
+        result += splitting[0];
+        result += "�";
+        for (let i = 0; i < twDecolor.length; i++) {
+          result += String.fromCharCode(192 + twDecolor[i]);
+        }
+        return result;
+      }
     k["addEventListener"]("pointerdown", function (e) {
       var t = n;
 
@@ -1630,7 +1641,7 @@ function convertToEmote(msg) {
                 s["startsWith"]("http") && (f = v = !1),
                 (tt["copycolour"]["checked"] && f) ||
                 (tt["copydecorations"]["checked"] && v)
-                  ? ar(s + Z + d)
+                  ? ar(d + s + Z)
                   : ar(s),
                 (Ce.x = l),
                 (Ce.y = u),
@@ -1823,7 +1834,7 @@ function convertToEmote(msg) {
         var t = n,
           r = rr();
         if (r) {
-          ar(r[0]),
+          ar(convertToTextwall(r[0])),
             e["preventDefault"](),
             e["clipboardData"] || ir("Copied character.", 1e3);
           var a = document["getElementById"]("copyico");
