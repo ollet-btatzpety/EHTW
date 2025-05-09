@@ -744,7 +744,7 @@ function convertToEmote(msg) {
     }
     var Bt = RegExp("^[a-zA-Z0-9_-]{1,24}$");
     function Ft(e) {
-      return "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[Math["floor"](26 * e)].codePointAt();
+      return 65 + Math.floor(26 * e);
     }
     function Pt(e) {
       return 48 + Math.floor(10 * e);
@@ -752,9 +752,33 @@ function convertToEmote(msg) {
     function Lt(e) {
       return "AIEOU"[Math["floor"](5 * e)].codePointAt();
     }
+    function Asymt(e) {
+      return "~!@#$%^&*()_+{}|:<>?`-=[];',./\"\\"[Math["floor"](32 * e)].codePointAt();
+    }
     function Ot(e) {
       var t = n;
       return "BCDFGHJKLMNPÞRSTVWXYZQ"[Math["floor"](22 * e)]["codePointAt"]();
+    }
+    function IPAA(e) {
+      return "aäæɐɑɒʌeɘəɚɛɜɝɞiɨɪoøœɔɵɶuʉʊɯyɤɥʏ"[Math["floor"](32 * e)]["codePointAt"]();
+    }
+    function IPAB(e) {
+      return "bɓʙꞵcçɕdðɖɗʣʥʤᶑfgɠɡɢɣʛhħɦɧʜjɟʝklɫɬɭɮʟmɱnŋɲɳɴθpɸqrɹɺɻɽɾʀʁsʂʃʄtʈʦʧvʋⱱwɰʍxχzʐʑʒǀǂǃʘʔʡʕʢ"[Math["floor"](76 * e)]["codePointAt"]();
+    }
+    function IPAC(e) {
+      return "aäæɐɑɒʌeɘəɚɛɜɝɞiɨɪoøœɔɵɶuʉʊɯyɤɥʏbɓʙꞵcçɕdðɖɗʣʥʤᶑfgɠɡɢɣʛhħɦɧʜjɟʝklɫɬɭɮʟmɱnŋɲɳɴθpɸqrɹɺɻɽɾʀʁsʂʃʄtʈʦʧvʋⱱwɰʍxχzʐʑʒǀǂǃʘʔʡʕʢ"[Math["floor"](116 * e)]["codePointAt"]();
+    }
+    function ArrowB(e) {
+      return "↕↔⤡⤢"[Math["floor"](4 * e)]["codePointAt"]();
+    }
+    function ArrowA(e) {
+      return "←↑→↓↖↗↘↙"[Math["floor"](8 * e)]["codePointAt"]();
+    }
+    function ArrowD(e) {
+      return "←↑→↓"[Math["floor"](4 * e)]["codePointAt"]();
+    }
+    function ArrowC(e) {
+      return "←↑→↓↔↕↖↗↘↙⤡⤢"[Math["floor"](12 * e)]["codePointAt"]();
     }
     function BinaryA(e) {
       return "01"[Math["floor"](2 * e)]["codePointAt"]();
@@ -765,6 +789,36 @@ function convertToEmote(msg) {
     function HexB(e) {
       return "0123456789abcdef"[Math["floor"](16 * e)]["codePointAt"]();
     }
+    function ToneA(e) {
+      return "˥˦˧˨˩"[Math["floor"](5 * e)]["codePointAt"]();
+    }
+    function SegA(e) {
+      return 130032 + Math.floor(10 * e);
+    }
+    function SegB(e) {
+      return 130032 + Math.floor(2 * e);
+    }
+    function BrailleA(e) {
+      return 10240 + Math.floor(256 * e);
+    }
+    function HexagramA(e) {
+      return 19904 + Math.floor(64 * e);
+    }
+    function FullUniA(e) {
+      return Math.floor(65535 * e);
+    }
+    function ShapeA(e) {
+      return "■□▲△◆◇●○★☆⬟⬠⬢⬡"[Math["floor"](14 * e)]["codePointAt"]();
+    }
+    function ShapeB(e) {
+      return "■▲◆●★⬟⬢⯄"[Math["floor"](8 * e)]["codePointAt"]();
+    }
+    function ShapeC(e) {
+      return "■▲▶▼◀◆●★⬟⯂⬢⯄⯃"[Math["floor"](13 * e)]["codePointAt"]();
+    }
+    function PhantomZero(e) {
+      return "1234 56789"[Math["floor"](10 * e)]["codePointAt"]();
+    }
     function LNums(e) {
       return "0123456789QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm"[Math["floor"](62 * e)]["codePointAt"]();
     }
@@ -774,8 +828,74 @@ function convertToEmote(msg) {
     function UppNums(e) {
       return "0123456789QWERTYUIOPASDFGHJKLZCVBNM"[Math["floor"](35 * e)]["codePointAt"]();
     }
-    function OBreak(e) {
-      return "oooooooooooooooo"[Math["floor"](16 * e)]["codePointAt"]();
+    function GreekA(e) {
+      return "0123456789ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ"[Math["floor"](34 * e)]["codePointAt"]();
+    }
+    function GreekB(e) {
+      return "0123456789αβγδεζηθικλμνξοπρςστυφχψω"[Math["floor"](35 * e)]["codePointAt"]();
+    }
+    function GreekC(e) {
+      return "ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ"[Math["floor"](24 * e)]["codePointAt"]();
+    }
+    function GreekD(e) {
+      return "αβγδεζηθικλμνξοπρςστυφχψω"[Math["floor"](25 * e)]["codePointAt"]();
+    }
+    function GreekE(e) {
+      return "αβγδεζηθικλμνξοπρςστυφχψωϵϑϰϖϱϕ"[Math["floor"](31 * e)]["codePointAt"]();
+    }
+    function GreekF(e) {
+      return "0123456789ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩαβγδεζηθικλμνξοπρςστυφχψω"[Math["floor"](59 * e)]["codePointAt"]();
+    }
+    function GreekG(e) {
+      return "ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩαβγδεζηθικλμνξοπρςστυφχψω"[Math["floor"](49 * e)]["codePointAt"]();
+    }
+    function GreekH(e) {
+      return "ΑΕΗΙΟΥΩ"[Math["floor"](7 * e)]["codePointAt"]();
+    }
+    function GreekI(e) {
+      return "ΒΓΔΖΘΚΛΜΝΞΠΡΣΤΦΧΨ"[Math["floor"](17 * e)]["codePointAt"]();
+    }
+    function GreekJ(e) {
+      return "βγδζθκλμνξπρςστφχψ"[Math["floor"](18 * e)]["codePointAt"]();
+    }
+    function GreekK(e) {
+      return "ΒΓΔΖΘΚΛΜΝΞΠΡΣΤΦΧΨβγδζθκλμνξπρςστφχψ"[Math["floor"](35 * e)]["codePointAt"]();
+    }
+    function CyrA(e) {
+      return "0123456789АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдежзийклмнопрстуфхцчшщъыьэюя"[Math["floor"](74 * e)]["codePointAt"]();
+    }
+    function CyrB(e) {
+      return "0123456789АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"[Math["floor"](42 * e)]["codePointAt"]();
+    }
+    function CyrC(e) {
+      return "0123456789абвгдежзийклмнопрстуфхцчшщъыьэюя"[Math["floor"](42 * e)]["codePointAt"]();
+    }
+    function CyrD(e) {
+      return "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"[Math["floor"](32 * e)]["codePointAt"]();
+    }
+    function CyrE(e) {
+      return "0123456789АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯЀЁЂЃЄЅІЇЈЉЊЋЌЍЎЏабвгдежзийклмнопрстуфхцчшщъыьэюяѐёђѓєѕіїјљњћќѝўџ"[Math["floor"](106 * e)]["codePointAt"]();
+    }
+    function CyrF(e) {
+      return "0123456789АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯЀЁЂЃЄЅІЇЈЉЊЋЌЍЎЏ"[Math["floor"](58 * e)]["codePointAt"]();
+    }
+    function CyrG(e) {
+      return "0123456789абвгдежзийклмнопрстуфхцчшщъыьэюяѐёђѓєѕіїјљњћќѝўџ"[Math["floor"](58 * e)]["codePointAt"]();
+    }
+    function CyrH(e) {
+      return 1024 + Math.floor(48 * e);
+    }
+    function CyrI(e) {
+      return "АЕИЙОУЫЭЮЯ"[Math["floor"](10 * e)]["codePointAt"]();
+    }
+    function CyrJ(e) {
+      return "БВГДЖЗКЛМНПРСТФХЦЧШЩ"[Math["floor"](20 * e)]["codePointAt"](); 
+    }
+    function CyrK(e) {
+      return "ЪЬ"[Math["floor"](2 * e)]["codePointAt"](); 
+    }
+    function CyrL(e) {
+      return "БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬ"[Math["floor"](22 * e)]["codePointAt"](); 
     }
     function Rt(e) {
       const t = Math.random();
@@ -806,8 +926,122 @@ function convertToEmote(msg) {
           return Ot(t) + 32;
         case 12:
           return Ot(t);
+        case 13:
+          return IPAA(t);
+        case 14:
+          return IPAB(t);
+        case 15:
+          return IPAC(t);
+        case 16:
+          return ArrowA(t);
+        case 17:
+          return ArrowB(t);
+        case 18:
+          return ArrowC(t);
+        case 19:
+          return ArrowD(t);
+        case 20:
+          return BinaryA(t);
+        case 21:
+          return HexB(t);
+        case 22:
+          return HexA(t);
+        case 23:
+          return SegA(t);
+        case 24:
+          return SegB(t);
+        case 25:
+          return ToneA(t);
+        case 26:
+          return BrailleA(t);
+        case 27:
+          return Asymt(t);
+        case 28:
+          return HexagramA(t);
+        case 67:
+          return PhantomZero(t);
+        case 30:
+          return GreekF(t);
+        case 31:
+          return GreekB(t);
+        case 32:
+          return GreekA(t);
+        case 33:
+          return GreekG(t);
+        case 34:
+          return GreekD(t);
+        case 35:
+          return GreekE(t);
+        case 36:
+          return GreekC(t);
+        case 37:
+          return t < 0.5 ? GreekH(t) + 32 : GreekH(t);
+        case 38:
+          return GreekH(t) + 32;
+        case 39:
+          return GreekH(t);
+        case 40:
+          return GreekK(t);
+        case 41:
+          return GreekJ(t);
+        case 42:
+          return GreekI(t);
+        case 43:
+          return CyrA(t);
+        case 44:
+          return CyrC(t);
+        case 45:
+          return CyrB(t);
+        case 46:
+          return t < 0.5 ? CyrD(t) + 32 : CyrD(t);
+        case 47:
+          return CyrD(t) + 32;
+        case 48:
+          return CyrD(t);
+        case 49:
+          return CyrE(t);
+        case 50:
+          return CyrG(t);
+        case 51:
+          return CyrF(t);
+        case 52:
+          return t < 0.5 ? CyrH(t) + 48 : CyrH(t);
+        case 53:
+          return CyrH(t) + 48;
+        case 54:
+          return CyrH(t);
+        case 55:
+          return t < 0.5 ? CyrI(t) + 32 : CyrI(t);
+        case 56:
+          return CyrI(t) + 32;
+        case 57:
+          return CyrI(t);
+        case 58:
+          return t < 0.5 ? CyrJ(t) + 32 : CyrJ(t);
+        case 59:
+          return CyrJ(t) + 32;
+        case 60:
+          return CyrJ(t);
+        case 61:
+          return t < 0.5 ? CyrK(t) + 32 : CyrK(t);
+        case 62:
+          return CyrK(t) + 32;
+        case 63:
+          return CyrK(t);
+        case 64:
+          return t < 0.5 ? CyrL(t) + 32 : CyrL(t);
+        case 65:
+          return CyrL(t) + 32;
+        case 66:
+          return CyrL(t);
+        case 68:
+          return ShapeA(t);
+        case 69:
+          return ShapeB(t);
+        case 70:
+          return ShapeC(t);
       }
-      return OBreak(t*1.01); // has a 1 in 101 chance to break
+      return FullUniA(t);
     }
     function Dt(e) {
       return (e + 2) % 20 < 2;
@@ -2366,37 +2600,34 @@ function convertToEmote(msg) {
       c["appendChild"](l),
       c.appendChild(document.createTextNode(": ")),
       c.appendChild(s);
-      // main brainrot words will be corrected
-      c.innerHTML = correct(c.innerHTML,"rizz","charisma");
-      c.innerHTML = correct(c.innerHTML,"gyat","but");
-      c.innerHTML = correct(c.innerHTML,"ohio","australia")
-      c.innerHTML = correct(c.innerHTML,"sigma","σ")
-      c.innerHTML = correct(c.innerHTML,"beta","β");
-      c.innerHTML = correct(c.innerHTML,"alpha","α");
-      c.innerHTML = correct(c.innerHTML,"αbet","alphabet");
-      c.innerHTML = correct(c.innerHTML,"αnumeric","alphanumeric"); 
-      c.innerHTML = correct(c.innerHTML,"dandy's world","badass game");
-      c.innerHTML = correct(c.innerHTML,"fanum tax","food theft auto");
-      c.innerHTML = correct(c.innerHTML,"skibidi","badass");
-      c.innerHTML = correct(c.innerHTML,"yapping","speaking");
-      c.innerHTML = correct(c.innerHTML,"im cooke","im fucke"); // cooked to fucked
-      c.innerHTML = correct(c.innerHTML,"i'm cooke","i'm fucke");
-      c.innerHTML = correct(c.innerHTML,"is cooke","is fucke");
-      c.innerHTML = correct(c.innerHTML," are cooke","' fucke");
-      c.innerHTML = correct(c.innerHTML,"am i cooke","am i fucke");
-      c.innerHTML = correct(c.innerHTML,"am cooke","am fucke");
-      c.innerHTML = correct(c.innerHTML,"numberblocks","badass show");
-      c.innerHTML = correct(c.innerHTML,atob('bmlnZ2E='),"https://discord.gg/23eESSV9xR");
-      c.innerHTML = correct(c.innerHTML,atob('bmlnZ2Vy'),"https://discord.gg/23eESSV9xR");
-      c.innerHTML = correct(c.innerHTML,atob('eXVuYQ=='),"https://discord.gg/23eESSV9xR");
-	c.innerHTML = c.innerHTML.replace(
+      s.innerHTML = s.innerHTML.replace(
         /((http|https|ftp):\/\/[\w?=&.\/-;#~%-]+(?![\w\s?&.\/;#~%"=-]*>))/g,
         '<a href="/$1" target="_blank">$1</a>'
       );
-      c.innerHTML = c.innerHTML.replace(
+      s.innerHTML = s.innerHTML.replace(
         /(@[\w?=._-]+(?![\w\s?._-]*>))/g,
         '<a id="userwall" target="_blank">$1</a>'
       );
+      // main brainrot words will be corrected
+      s.innerHTML = correct(s.innerHTML,"rizz","charisma"); // charismaler 😭
+      s.innerHTML = correct(s.innerHTML,"gyat","but");
+      s.innerHTML = correct(s.innerHTML,"ohio","australia"); // if this is where you live, i am sorry
+      s.innerHTML = correct(s.innerHTML,"sigma","σ"); // s*gma, beta and alpha will be corrected due to them being gen alpha words
+      s.innerHTML = correct(s.innerHTML,"beta","β");
+      s.innerHTML = correct(s.innerHTML,"alpha","α");
+      s.innerHTML = correct(s.innerHTML,"αbet","alphabet"); // okay fuck
+      s.innerHTML = correct(s.innerHTML,"αnumeric","alphanumeric"); 
+      s.innerHTML = correct(s.innerHTML,"dandy's world","badass game");
+      s.innerHTML = correct(s.innerHTML,"fanum tax","food theft auto");
+      s.innerHTML = correct(s.innerHTML,"skibidi","cringe");
+      s.innerHTML = correct(s.innerHTML,"yapping","speaking");
+      s.innerHTML = correct(s.innerHTML,"im cooke","im fucke");
+      s.innerHTML = correct(s.innerHTML,"i'm cooke","i'm fucke");
+      s.innerHTML = correct(s.innerHTML,"am i cooke","am i fucke");
+      s.innerHTML = correct(s.innerHTML,"numberblocks","badass show");
+      s.innerHTML = correct(s.innerHTML,atob('bmlnZ2E='),"black person");
+      s.innerHTML = correct(s.innerHTML,atob('bmlnZ2Vy'),"black person");
+      s.innerHTML = correct(s.innerHTML,atob('eXVuYQ=='),"going to die");
       var u =
         Math["abs"](i["scrollHeight"] - i["scrollTop"] - i["clientHeight"]) < 5;
       twemoji.parse(c, { base: "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/" }); // twemoji isnt defined
@@ -2410,7 +2641,7 @@ function convertToEmote(msg) {
       addChat(user, 0, msg, false, 0);
     }
     function clientMessage(msg) {
-      usersMessage(msg,"Clint")
+      usersMessage(msg,"Client")
     }
     function Tn(e) {
       var t = n,
