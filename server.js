@@ -21,6 +21,29 @@ var fetch = require("node-fetch");
 var bodyParser = require("body-parser");
 var { Client, Intents } = require("discord.js");
 
+const eightballmessages = [
+  "It is certain",
+"It is decidedly so",
+"Without a doubt",
+"Yes definitely",
+"You may rely on it",
+"As I see it, yes",
+"Most likely",
+"Outlook good",
+"Yes",
+"Signs point to yes",
+"Reply hazy, try again",
+"Ask again later",
+"Better not tell you now",
+"Cannot predict now",
+"Concentrate and ask again",
+"Don't count on it",
+"My reply is no",
+"My sources say no",
+"Outlook not so good",
+"Very doubtful",
+];
+
 var registersLimit = {};
 var chatsLimit = {}; 
 var banReasons = {};
@@ -28,7 +51,7 @@ var port = 8080;
 var loginToType = false;
 var registrationClosed = false;
 var serverClosing = false;
-const admins = ["uni", "falling1"];
+const admins = ["ollet", "AbECilpOzKaj0347"];
 var uptime = Math.floor(Date.now() / 1000);
 var upfor = new Date().toString();
 // public/static/colors.js
@@ -37,7 +60,7 @@ var colors = {
   "1": "grey",
   "2": "light grey",
   "3": "light pink",
-  "4": "red",
+  "4": "light red",
   "5": "orange",
   "6": "brown",
   "7": "yellow",
@@ -48,20 +71,20 @@ var colors = {
   "12": "dark blue",
   "13": "purple",
   "14": "dark purple",
-  "15": "dark red",
+  "15": "red",
   "16": "dark green",
   "17": "dark teal",
   "18": "teal",
   "19": "indigo",
-  "20": "periwinkle",
+  "20": "blueberry",
   // 20: discord?!?!?!?!?
   "21": "pink",
-  "22": "dark brown",
-  "23": "burgundy",
+  "22": "gold",
+  "23": "maroon",
   "24": "pale yellow",
   "25": "light teal",
   "26": "lavender",
-  "27": "pale purple",
+  "27": "lilac",
   "28": "magenta",
   "29": "beige",
   "30": "dark grey",
@@ -101,12 +124,12 @@ var colours = colors; //british spellign
 // end of colors.js
 // info for discord bot to work
 const oauth = new DiscordOauth2({
-  clientId: "1201515886683619368",
+  clientId: process.env.clientid,
   clientSecret: process.env.clientsecret,
   redirectUri: "https://ehtw.glitch.me/authorized.html",
 });
 
-// for goatway to receive messages from discord and send them to uni's textwall
+// for goatway to receive messages from discord and send them to ehtw
 const client = new Client({
   intents: [
     Intents.FLAGS.GUILDS,
@@ -119,7 +142,7 @@ const client = new Client({
 client.on("ready", async () => {
   console.log("The Discord bot is ready");
   
-  const guildId = "1196101562741825677"; // Replace "YOUR_GUILD_ID" with your guild's ID
+  const guildId = "1246472476167376956"; // Replace "YOUR_GUILD_ID" with your guild's ID
   const guild = client.guilds.cache.get(guildId);
   if (!guild) {
     console.error(`Guild with ID ${guildId} not found.`);
@@ -151,7 +174,7 @@ client.on("ready", async () => {
   }
 });
 
-const discordAdmins = ["falling1", "therealunicat"];
+const discordAdmins = ["dergizaar", "airbus_a390", "b_er_73362"];
 client.on("interactionCreate", async (interaction) => {
   if (!interaction.isCommand()) return;
 
@@ -190,9 +213,9 @@ client.on("interactionCreate", async (interaction) => {
   }
   });
 // login to the bot
-//client.login(process.env.discordbottoken);
+client.login(process.env.discordbottoken);
 client.on("messageCreate", (msg) => {
-  if (msg.channelId != "1202685655054950502" || msg.author.bot || !msg.content)
+  if (msg.channelId != "1312747123028000849" || msg.author.bot || !msg.content)
     return;
   worldBroadcast(
     1,
@@ -265,7 +288,7 @@ function adminStuff(req, res, next) {
       httpOnly: true,
     });
     res.send(
-      "You now have the admin cookie, you can access Uni's TextWall while it's in maintenance mode with this special cookie!"
+      "You now have the admin cookie, you can access EHTW while it's in maintenance mode with this special cookie!"
     );
     return;
   }
@@ -413,21 +436,21 @@ function send(ws, data) {
 }
 
 function constructChar(color, bold, italic, underline, overline, strike) {
-  var format = (overline << 4) | (bold << 3) | (italic << 2) | (underline << 1) | strike;
-  var n = format * 34 + color;
+  var format = strike | (underline << 1) | (italic << 2) | (bold << 3) | (overline << 4);
+  var n = format * 31 + color;
   return String.fromCharCode(n + 192);
 }
 
 function parseChar(chr) {
-  var col = chr % 34;
-  var format = Math.floor(chr / 34);
+  var col = chr % 31;
+  var format = Math.floor(chr / 31);
   return {
     color: col,
-		bold: (format & 8) == 8,
-		italic: (format & 4) == 4,
-		underline: (format & 2) == 2,
+    bold: (format & 8) == 8,
+    italic: (format & 4) == 4,
+    underline: (format & 2) == 2,
     overline: (format & 16) == 16,
-		strike: (format & 1) == 1,
+    strike: (format & 1) == 1,
   };
 }
 
@@ -794,11 +817,11 @@ function init_ws() {
       ipConnLim[ipAddr] = [0, 0, 0]; // connections, blocks placed in current second period, second period
     }
     var connObj = ipConnLim[ipAddr];
-// if there's a ip with 3 or more connections, warn in the server logs and ping uni cat in the discord server about it, then close the connections
+// if there's a ip with 3 or more connections, warn in the server logs and ping admin in the discord server about it, then close the connections
     if (connObj[0] >= 3) {
       console.warn("DoS alert! IP: " + ipAddr);
       webhookSend(process.env.dosalerturl, {
-       content: "<@836988339491962881>, <https://ipinfo.io/" + ipAddr + "> thanks <https://unitextwall.glitch.me/>"
+       content: "<@836988339491962881>, <https://ipinfo.io/" + ipAddr + "> thanks <https://ehtw.glitch.me/>"
       });
       ws.close();
       return; // what
@@ -831,7 +854,8 @@ function init_ws() {
       connectedWorldNamespace: "",
       connectedWorldName: "",
       connectedWorldId: 0,
-      clientId: Math.floor(Math.random() * (16**8) + 1).toString(16), cursorX: 0,
+      clientId: (Math.random() * 9999 + 1).toString(),
+      cursorX: 0,
       cursorY: 0,
       cursorColor: 0,
       cursorAnon: false,
@@ -971,7 +995,7 @@ function init_ws() {
           }
         }
         
-        webhookSend(process.env.joinlogurl, {
+        webhookSend(process.env.goatwaywebhookurl, {
             content: `${sdata.isAuthenticated ? sdata.authUser : sdata.clientId} has joined`,
           }, 2);
 
@@ -1216,7 +1240,7 @@ function init_ws() {
         if (!message.trim()) return;
         if (message.length > 400) return;
 
-        var nick = "Guest#" + sdata.clientId;
+        var nick = "(" + sdata.clientId + ")";
         if (sdata.isAuthenticated) {
           nick = sdata.authUser;
         }
@@ -1229,18 +1253,6 @@ function init_ws() {
               alert: message,
             })
           );
-          return;
-        }
-        // Mute people command
-        if (cmd == "/mute" && sdata.isAdmin) {
-          var id = parseInt(args[0]), muteDuration = parseInt(args[1]);
-          if (isNaN(id)) return serverMessage(ws, "Invalid id");
-          var client = getClientById(id);
-          if (!client) return serverMessage(ws, "Client not found");
-          if (isNaN(muteDuration) || muteDuration < 0) return serverMessage(ws, "Invalid duration");
-          client.mutedUntil = (Date.now() + muteDuration);
-          client.waitUntilUnmuted = ((client.mutedUntil)-Date.now())/1000;
-          serverMessage(ws, "Muted client for " + parseInt(args[1]) + " seconds!");
           return;
         }
         // kick people command
@@ -1348,6 +1360,10 @@ function init_ws() {
           else stopServer();
           return;
         }
+        if (
+          ["/8ball"].includes(cmd)) {
+          addChat("8ball", Math.floor(Math.random()*31),eightballmessages[Math.floor(Math.random()*31)],false,26619);
+        }
         if (["/maintenance"].includes(cmd) && sdata.isAdmin) {
           var maintenanceMode = 1;
           return;
@@ -1359,7 +1375,7 @@ function init_ws() {
         // 2 per sec
         var limit = chatsLimit[ip];
         if (limit > 2) {
-          serverMessage(ws, "Stfu, your IP is " + ipAddr);
+          serverMessage(ws, "Shut the fuck up " + ipAddr);
           webhookSend(process.env.dosalerturl, {
             content: "Spam alert! IP: " + ipAddr + ", from " + sdata.authUser + " (" + sdata.clientId + ")",
           });
