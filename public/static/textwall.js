@@ -258,7 +258,7 @@ function convertToEmote(msg) {
         "Yu Mono Gothic": 18,
         Custom: 20,                                                 
         };
-    var G = "JetBrains Mono",
+    var G = "Sometype Mono",
       Q = Math.floor($[G] * v) + "px " + G + ", monospace, Special";
     const _ = new Map();
     _["set"]("Unifont", void 0),
@@ -2366,34 +2366,37 @@ function convertToEmote(msg) {
       c["appendChild"](l),
       c.appendChild(document.createTextNode(": ")),
       c.appendChild(s);
-      s.innerHTML = s.innerHTML.replace(
+      // main brainrot words will be corrected
+      c.innerHTML = correct(c.innerHTML,"rizz","charisma");
+      c.innerHTML = correct(c.innerHTML,"gyat","but");
+      c.innerHTML = correct(c.innerHTML,"ohio","australia")
+      c.innerHTML = correct(c.innerHTML,"sigma","σ")
+      c.innerHTML = correct(c.innerHTML,"beta","β");
+      c.innerHTML = correct(c.innerHTML,"alpha","α");
+      c.innerHTML = correct(c.innerHTML,"αbet","alphabet");
+      c.innerHTML = correct(c.innerHTML,"αnumeric","alphanumeric"); 
+      c.innerHTML = correct(c.innerHTML,"dandy's world","badass game");
+      c.innerHTML = correct(c.innerHTML,"fanum tax","food theft auto");
+      c.innerHTML = correct(c.innerHTML,"skibidi","badass");
+      c.innerHTML = correct(c.innerHTML,"yapping","speaking");
+      c.innerHTML = correct(c.innerHTML,"im cooke","im fucke"); // cooked to fucked
+      c.innerHTML = correct(c.innerHTML,"i'm cooke","i'm fucke");
+      c.innerHTML = correct(c.innerHTML,"is cooke","is fucke");
+      c.innerHTML = correct(c.innerHTML," are cooke","' fucke");
+      c.innerHTML = correct(c.innerHTML,"am i cooke","am i fucke");
+      c.innerHTML = correct(c.innerHTML,"am cooke","am fucke");
+      c.innerHTML = correct(c.innerHTML,"numberblocks","badass show");
+      c.innerHTML = correct(c.innerHTML,atob('bmlnZ2E='),"https://discord.gg/23eESSV9xR");
+      c.innerHTML = correct(c.innerHTML,atob('bmlnZ2Vy'),"https://discord.gg/23eESSV9xR");
+      c.innerHTML = correct(c.innerHTML,atob('eXVuYQ=='),"https://discord.gg/23eESSV9xR");
+	c.innerHTML = c.innerHTML.replace(
         /((http|https|ftp):\/\/[\w?=&.\/-;#~%-]+(?![\w\s?&.\/;#~%"=-]*>))/g,
         '<a href="/$1" target="_blank">$1</a>'
       );
-      s.innerHTML = s.innerHTML.replace(
+      c.innerHTML = c.innerHTML.replace(
         /(@[\w?=._-]+(?![\w\s?._-]*>))/g,
         '<a id="userwall" target="_blank">$1</a>'
       );
-      // main brainrot words will be corrected
-      s.innerHTML = correct(s.innerHTML,"rizz","charisma"); // charismaler 😭
-      s.innerHTML = correct(s.innerHTML,"gyat","but");
-      s.innerHTML = correct(s.innerHTML,"ohio","australia"); // if this is where you live, i am sorry
-      s.innerHTML = correct(s.innerHTML,"sigma","σ"); // s*gma, beta and alpha will be corrected due to them being gen alpha words
-      s.innerHTML = correct(s.innerHTML,"beta","β");
-      s.innerHTML = correct(s.innerHTML,"alpha","α");
-      s.innerHTML = correct(s.innerHTML,"αbet","alphabet"); // okay fuck
-      s.innerHTML = correct(s.innerHTML,"αnumeric","alphanumeric"); 
-      s.innerHTML = correct(s.innerHTML,"dandy's world","badass game");
-      s.innerHTML = correct(s.innerHTML,"fanum tax","food theft auto");
-      s.innerHTML = correct(s.innerHTML,"skibidi","cringe");
-      s.innerHTML = correct(s.innerHTML,"yapping","speaking");
-      s.innerHTML = correct(s.innerHTML,"im cooke","im fucke");
-      s.innerHTML = correct(s.innerHTML,"i'm cooke","i'm fucke");
-      s.innerHTML = correct(s.innerHTML,"am i cooke","am i fucke");
-      s.innerHTML = correct(s.innerHTML,"numberblocks","badass show");
-      s.innerHTML = correct(s.innerHTML,atob('bmlnZ2E='),"black person");
-      s.innerHTML = correct(s.innerHTML,atob('bmlnZ2Vy'),"black person");
-      s.innerHTML = correct(s.innerHTML,atob('eXVuYQ=='),"going to die");
       var u =
         Math["abs"](i["scrollHeight"] - i["scrollTop"] - i["clientHeight"]) < 5;
       twemoji.parse(c, { base: "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/" }); // twemoji isnt defined
