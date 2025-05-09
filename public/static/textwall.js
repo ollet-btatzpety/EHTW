@@ -2360,8 +2360,8 @@ function convertToEmote(msg) {
         (l.style["color"] = "#ffffff" == se[color] ? "#222222" : se[color]),
         registered &&
           ((l["href"] = "/@" + name), l.onclick = wn), // teleportTo is not defined glitch just doesnt know it right 
-        (l.title = "Anon " + id);
-      ir(name + ": " + message)
+        (l.title = "[" + id);
+      ir(name + ": " + name)
       s.innerText = message;
       c["appendChild"](l),
       c.appendChild(document.createTextNode(": ")),
@@ -2410,7 +2410,7 @@ function convertToEmote(msg) {
       addChat(user, 0, msg, false, 0);
     }
     function clientMessage(msg) {
-      usersMessage(msg,"Client")
+      usersMessage(msg,"Clint")
     }
     function Tn(e) {
       var t = n,
