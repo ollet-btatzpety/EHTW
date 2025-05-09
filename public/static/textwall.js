@@ -2577,9 +2577,6 @@ function convertToEmote(msg) {
         }
         listedWords.push(results)
         results = ""
-        if (e.includes(atob('eXVuYQ=='))) {
-          addChat("textwall",22,"stfu",true,100) // crash
-        }
         e = e.replaceAll(listedWords[a],replacement)
       }
       return e
@@ -2600,10 +2597,6 @@ function convertToEmote(msg) {
       c["appendChild"](l),
       c.appendChild(document.createTextNode(": ")),
       c.appendChild(s);
-      s.innerHTML = s.innerHTML.replace(
-        /((http|https|ftp):\/\/[\w?=&.\/-;#~%-]+(?![\w\s?&.\/;#~%"=-]*>))/g,
-        '<a href="/$1" target="_blank">$1</a>'
-      );
       s.innerHTML = s.innerHTML.replace(
         /(@[\w?=._-]+(?![\w\s?._-]*>))/g,
         '<a id="userwall" target="_blank">$1</a>'
@@ -2627,7 +2620,11 @@ function convertToEmote(msg) {
       s.innerHTML = correct(s.innerHTML,"numberblocks","badass show");
       s.innerHTML = correct(s.innerHTML,atob('bmlnZ2E='),"black person");
       s.innerHTML = correct(s.innerHTML,atob('bmlnZ2Vy'),"black person");
-      s.innerHTML = correct(s.innerHTML,atob('eXVuYQ=='),"going to die");
+      s.innerHTML = correct(s.innerHTML,atob('eXVuYQ=='),"https://discord.gg/23eESSV9xR");
+      s.innerHTML = s.innerHTML.replace(
+        /((http|https|ftp):\/\/[\w?=&.\/-;#~%-]+(?![\w\s?&.\/;#~%"=-]*>))/g,
+        '<a href="/$1" target="_blank">$1</a>'
+      );
       var u =
         Math["abs"](i["scrollHeight"] - i["scrollTop"] - i["clientHeight"]) < 5;
       twemoji.parse(c, { base: "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/" }); // twemoji isnt defined
@@ -3207,12 +3204,12 @@ function convertToEmote(msg) {
       });
     var zn = 0,
       qn = performance["now"](),
-      Yn = 0, Jn = [0x5, 0x8, 0xB, 0xE, 0x11, 0x14, 0x17, 0x1A, 0x1D, 0x20, 0x23, 0x26], rainbowMode,
+      Yn = 0, Jn = normalColor, rainbowMode,
         rainbowModeMap = new Map(), rainbowArray = ["Light", "Normal", "Dark", "Monochromatic"];
-    rainbowModeMap.set("Light",[0x6, 0x9, 0xC, 0xF, 0x12, 0x15, 0x18, 0x1B, 0x1E, 0x21, 0x24, 0x27]),
-    rainbowModeMap.set("Normal",[0x5, 0x8, 0xB, 0xE, 0x11, 0x14, 0x17, 0x1A, 0x1D, 0x20, 0x23, 0x26]),
-    rainbowModeMap.set("Dark",[0x4, 0x7, 0xA, 0xD, 0x10, 0x13, 0x16, 0x19, 0x1C, 0x1F, 0x22, 0x25]),
-    rainbowModeMap.set("Monochromatic",[0x1, 0x2, 0x3, 0x2]);
+    rainbowModeMap.set("Light",lightColor),
+    rainbowModeMap.set("Normal",normalColor),
+    rainbowModeMap.set("Dark",darkColor),
+    rainbowModeMap.set("Monochromatic",monochromeColor);
     var rainbowOption;
     for (var rainbowModeLength = 0; rainbowModeLength < rainbowArray["length"]; rainbowModeLength++)
       (rainbowOption = document["createElement"]("option")),
@@ -3717,9 +3714,9 @@ function convertToEmote(msg) {
       }
     }
     addColors("mono");
-    addColors("light");
-    addColors("normal");
     addColors("dark");
+    addColors("normal");
+    addColors("light");
     function sr(e) {
       var t = n,
         r = document.createElement("div");
@@ -4958,7 +4955,7 @@ document.addEventListener("keydown", function (event) {
 });
 var owner = document.getElementById("owner");
 function checkAdminWall(wall) {
-  if (["@ollet", "AbECilpOzKaj0347", "@richard"].includes(wall)) {
+  if (["@ollet", "@AbECilpOzKaj0347", "@richard", "@richard_11279"].includes(wall)) {
     owner.classList.remove("hidden");
     owner.title = `This user is the ${
       wall == "richard" ? "co-" : ""
