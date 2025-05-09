@@ -248,6 +248,7 @@ function convertToEmote(msg) {
         "PT Mono": 16,
         "Roboto Mono": 17,
         "Segoe Mono Boot": 18,
+        "Sometype Mono": 17,
         "Source Code Pro": 17,
         "Space Mono": 16,
         "Terminus": 0,
@@ -1615,7 +1616,6 @@ function convertToEmote(msg) {
                 u = Ce.y;
               (Ce.x = r), (Ce.y = o);
               for (var s = "", d = "", f = !1, v = !1, h = o; h <= c; h++) {
-                var copiedSelection = "";
                 for (var y = r; y <= i; y++) {
                   var g = rr();
                   if (g) {
@@ -1623,17 +1623,15 @@ function convertToEmote(msg) {
                     var [p, b] = Zr(g[1]);
                     tt["copycolour"]["checked"] &&
                     tt["copydecorations"]["checked"]
-                      ? (copiedSelection += String(g[1]).padStart(4,"0"))
+                      ? (d += String["fromCharCode"](ue + g[1]))
                       : tt.copycolour["checked"]
-                      ? (copiedSelection += String(p).padStart(4,"0"))
+                      ? (d += String["fromCharCode"](ue + p))
                       : tt["copydecorations"].checked &&
-                        (copiedSelection += String(Vr(0, b)).padStart(4,"0")),
+                        (d += String["fromCharCode"](ue + Vr(0, b))),
                       Qn(g[0], b) || (0 != b && (v = !0), 0 != p && (f = !0)),
                       Ce.x++;
-                    copiedSelection += ","
                   }
                 }
-                d += copiedSelection.slice(0,copiedSelection.lastIndexOf(","));
                 (Ce.x = r), Ce.y++, (s += "\n"), (d += "�");
               }
               (s = s["slice"](0, -1)),
@@ -1641,7 +1639,7 @@ function convertToEmote(msg) {
                 s["startsWith"]("http") && (f = v = !1),
                 (tt["copycolour"]["checked"] && f) ||
                 (tt["copydecorations"]["checked"] && v)
-                  ? ar(d + s + Z)
+                  ? ar(s + Z + d)
                   : ar(s),
                 (Ce.x = l),
                 (Ce.y = u),
