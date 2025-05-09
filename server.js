@@ -103,7 +103,7 @@ var colours = colors; //british spellign
 const oauth = new DiscordOauth2({
   clientId: "1201515886683619368",
   clientSecret: process.env.clientsecret,
-  redirectUri: "https://unitextwall.glitch.me/authorized.html",
+  redirectUri: "https://ehtw.glitch.me/authorized.html",
 });
 
 // for goatway to receive messages from discord and send them to uni's textwall
