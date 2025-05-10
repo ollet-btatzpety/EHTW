@@ -249,6 +249,7 @@ function convertToEmote(msg) {
         "Overpass Mono": 16,
         "Oxygen Mono": 17,
         "PT Mono": 16,
+        "Red Hat Mono": 16,
         "Roboto Mono": 17,
         "Segoe Mono Boot": 18,
         "Sometype Mono": 17,
@@ -3636,13 +3637,17 @@ function convertToEmote(msg) {
           colorList.classList.add("hidden")
           break;
         case 1:
+          x.style["transform"] = "translateX(-105%)"
           colorShown = true
           colorList.classList.remove("hidden")
           break;
         default:
-          (x.style.transform = "translateX(0px)"),
+          x.style.transform = "translateX(0px)",
+          colorShown = false
+          colorList.classList.add("hidden")
             M["classList"]["contains"]("open") &&
               M["classList"]["remove"]("open");
+          
       }
       (lr = e), en();
     }
@@ -4186,8 +4191,8 @@ function convertToEmote(msg) {
         return { x: 0, y: 0 };
       if ("rules" == e)
         return { x: 30, y: -59 };
-      if ("d0o7-" == e)
-        return { x: 0, y: 8.235};
+      if ("unicode" == e)
+        return { x: 1620, y: 801};
       if ("rare_walls" == e)
         return { x: -20, y: 20};
       if ("rarewalls" == e)
