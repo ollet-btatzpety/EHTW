@@ -4172,9 +4172,13 @@ function convertToEmote(msg) {
     function Lr(e) {
       var t = n;
       if ("" == (e = decodeURI(e["toLowerCase"]())) || "@main" == e)
-        return { x: 0, y: 5 };
-      if ("rules" == e)
         return { x: 0, y: 0 };
+      if ("rules" == e)
+        return { x: 30, y: -59 };
+      if ("d0o7-" == e)
+        return { x: 0, y: 8.235};
+      if ("" == e)
+        return { x: 100000, y: -100000};
       var r = (function (e) {
         for (var n, r = t, a = [], o = e + "", i = 0; i < o["length"]; )
           a[255 & i] = 255 & ((n ^= 19 * a[255 & i]) + o["codePointAt"](i++));
