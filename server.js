@@ -331,7 +331,7 @@ app.get("/.data/data.sqlite3", (req, res, next) => {
 app.post("/sendmail", (req, res) => {
   if (req.body.length > 2000) return;
   webhookSend(process.env.mailwebhookurl, {
-    content: "\u005C" + req.body,
+    content: "" + req.body,
   }, 2).then(() => res.send("OK"));
 });
 // to send people to the public folder, and right file

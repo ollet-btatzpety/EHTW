@@ -24,7 +24,7 @@
     </form>
     <p>
       if urgent or important, you can include
-      <input value="<@836988339491962881>" readonly id="addping" /> in the mail
+      <input value="<@1367690174036709559>" readonly id="addping" /> in the mail
       to notify the owner of the site.
     </p>
     <script>
@@ -38,7 +38,7 @@
         }).then(() => ((submitbtn.disabled = false), (message.value = "")));
       };
       addping.onclick = () => {
-        message.value += "<@836988339491962881>";
+        message.value += "<@1367690174036709559>";
         message.focus();
         message.selectionStart = message.value.length - 21;
         message.selectionEnd = message.value.length;
@@ -46,9 +46,9 @@
       // if the localstorage key "username" doesnt exist, use "an anonymous user" instead
       var nickname = localStorage.getItem("username");
       if (nickname === null) {
-          nickname = "an anonymous user";
+          nickname = "guest.";
       }
-      message.value = "mail from " + nickname + ": please";
+      message.value = "This is " + nickname + ". I would like you to";
     </script>
   </body>
 </html>
