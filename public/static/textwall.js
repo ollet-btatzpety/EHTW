@@ -543,7 +543,7 @@ function convertToEmote(msg) {
       e &&
         (localStorage.removeItem("username"),
         localStorage["removeItem"]("token")),
-        (je = "(" + client.id + ")"),
+        (je = "[" + client.id + "]"),
         (client.registered = false),
         (j = 0),
         (X.style["display"] = "none"),
@@ -2816,7 +2816,7 @@ function convertToEmote(msg) {
             registered: T[3],
             id: T[4],
           });
-          if (!(T[0].startsWith("(") && tt["hideguestchat"]["checked"])) {
+          if (!(T[0].startsWith("[") && tt["hideguestchat"]["checked"])) {
           addChat(T[0], T[1], T[2], T[3], T[4]);
           }
           break;
@@ -2989,7 +2989,7 @@ function convertToEmote(msg) {
           client.id = a.id;
           console.log("Your ID: " + client.id);
           console.log("Joined on " + new Date());
-          je = "(" + client.id + ")";
+          je = "[" + client.id + "]";
           ge = true;
           break;
         case "banned":
@@ -4058,7 +4058,7 @@ function convertToEmote(msg) {
                 ws.readyState == WebSocket.OPEN &&
                 (gt(E),
                 Mt(
-                  tt["anonymous"]["checked"] ? "(" + client.id + ")" : je,
+                  tt["anonymous"]["checked"] ? "[" + client.id + "]" : je,
                   y,
                   g,
                   o

@@ -157,7 +157,7 @@ client.on("interactionCreate", async (interaction) => {
 
   const { commandName } = interaction;
   // online
-  if (commandName === "ehtwonline") {
+  if (commandName === "ehtw online") {
     var mainWallCount = 0;
     wss.clients.forEach((sock) => {
       if (sock.sdata.connectedWorldId == 1) mainWallCount++;
@@ -174,14 +174,14 @@ client.on("interactionCreate", async (interaction) => {
       ephemeral: true
     });
     // uptime
-  } else if (commandName === "ehtwuptime") {
+  } else if (commandName === "ehtw uptime") {
       interaction.reply({
         content:
         "The server has been up since <t:" + uptime + ":f>, which was <t:" + uptime + ":R>.",
         ephermeral: true
       });
     // stop
-  } else if (commandName === "ehtwstop") {
+  } else if (commandName === "ehtw stop") {
     if (!discordAdmins.includes(interaction.user.username)) {
       interaction.reply({ content: ":x: You are not an admin of this server.", ephermeral: true });
       return;
@@ -1216,7 +1216,7 @@ function init_ws() {
         if (!message.trim()) return;
         if (message.length > 400) return;
 
-        var nick = "Guest#" + sdata.clientId;
+        var nick = "[" + sdata.clientId + "]";
         if (sdata.isAuthenticated) {
           nick = sdata.authUser;
         }
