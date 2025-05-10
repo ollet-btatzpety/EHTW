@@ -1832,7 +1832,7 @@ function convertToEmote(msg) {
         var t = n,
           r = rr();
         if (r) {
-          ar(convertToTextwall(r[0])),
+          ar(r[0]),
             e["preventDefault"](),
             e["clipboardData"] || ir("Copied character.", 1e3);
           var a = document["getElementById"]("copyico");
