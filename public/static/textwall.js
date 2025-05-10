@@ -1800,8 +1800,6 @@ function convertToEmote(msg) {
               e["ctrlKey"] &&
                 (e["preventDefault"](), br("strikethrough"), ie(!0));
               break;
-            case 88:
-              e["ctrlKey"] && (e["preventDefault"](), Vn(" ", 0, !1, !0), nr());
             case 18:
               e["preventDefault"]();
               break;
@@ -1847,6 +1845,23 @@ function convertToEmote(msg) {
           ar(r[0]),
             e["preventDefault"](),
             e["clipboardData"] || ir("Copied character.", 1e3);
+          var a = document["getElementById"]("copyico");
+          (a["src"] = "/static/done.svg"),
+            setTimeout(function () {
+              var e = t;
+              a["src"] = "/static/copy.svg";
+            }, 1e3),
+            i["focus"]();
+        }
+      }),
+      i["addEventListener"]("cut", function (e) {
+        var t = n,
+          r = rr();
+        if (r) {
+          ar(r[0]),
+            e["preventDefault"](),
+            e["clipboardData"] || ir("Cut character.", 1e3);
+          Vn
           var a = document["getElementById"]("copyico");
           (a["src"] = "/static/done.svg"),
             setTimeout(function () {
