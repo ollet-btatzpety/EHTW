@@ -2570,8 +2570,8 @@ function convertToEmote(msg) {
         document["getElementById"]("connecting1").innerText = "Disconnected."; //connecting1 text
       }
       var a = document.createElement("a");
-      a.href = "https://discord.gg/rDXPEgFA6m";
-      a.innerText = "https://discord.gg/rDXPEgFA6m";
+      a.href = "https://discord.gg/23eESSV9xR";
+      a.innerText = "https://discord.gg/23eESSV9xR";
       a.target = "_blank";
       document.getElementById("connecting2").append(a);
       c.onclick = Kr;
