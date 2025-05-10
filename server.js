@@ -192,7 +192,7 @@ client.on("interactionCreate", async (interaction) => {
 // login to the bot
 client.login(process.env.discordbottoken);
 client.on("messageCreate", (msg) => {
-  if (msg.channelId != "1312747123028000849" || msg.author.bot || !msg.content)
+  if (msg.channelId != "1370670646908158044" || msg.author.bot || !msg.content)
     return;
   worldBroadcast(
     1,
