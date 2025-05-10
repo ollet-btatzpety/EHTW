@@ -106,7 +106,7 @@ const oauth = new DiscordOauth2({
   redirectUri: "https://unitextwall.glitch.me/authorized.html",
 });
 
-// for goatway to receive messages from discord and send them to uni's textwall
+// for goatway to receive messages from discord and send them to ehtw
 const client = new Client({
   intents: [
     Intents.FLAGS.GUILDS,
