@@ -4177,8 +4177,10 @@ function convertToEmote(msg) {
         return { x: 30, y: -59 };
       if ("d0o7-" == e)
         return { x: 0, y: 8.235};
-      if ("" == e)
-        return { x: 100000, y: -100000};
+      if ("rare_walls" == e)
+        return { x: -20, y: 20};
+      if ("rarewalls" == e)
+        return { x: -20, y: 21};
       var r = (function (e) {
         for (var n, r = t, a = [], o = e + "", i = 0; i < o["length"]; )
           a[255 & i] = 255 & ((n ^= 19 * a[255 & i]) + o["codePointAt"](i++));
