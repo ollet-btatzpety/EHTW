@@ -719,6 +719,14 @@ function serverMessage(ws, msg) {
     })
   );
 }
+function toolBotMessage(ws, msg) {
+  send(
+    ws,
+    msgpack.encode({
+      msg: ["EHToolBot", 0, msg, true, 100],
+    })
+  );
+}
 // kick and ban id
 function getClientById(id) {
   var client;
@@ -1352,6 +1360,11 @@ function init_ws() {
           return;
         }
         if (["/maintenance"].includes(cmd) && sdata.isAdmin) {
+          var maintenanceMode = 1;
+          stopServer();
+          return;
+        }
+        if (["/8ball"].includes(cmd) && sdata.isAdmin) {
           var maintenanceMode = 1;
           return;
         }
