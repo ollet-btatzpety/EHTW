@@ -4213,8 +4213,8 @@ function convertToEmote(msg) {
         );
       })(e);
       return {
-        y: 40 * Math["floor"]((Math["floor"](2e5 * r()) - 1e5) / 40),
-        x: 10 * Math["floor"]((Math["floor"](2e5 * r()) - 1e5) / 10),
+        x: Math["floor"]((Math["floor"](2e5 * r()) - 1e5)),
+        y: Math["floor"]((Math["floor"](2e5 * r()) - 1e5)),
       };
     }
     null != Br.x && ((Ce.x = parseInt(Br.x)), (Fr = !0)),
