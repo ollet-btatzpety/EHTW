@@ -5,7 +5,7 @@ body {
   position: static;
 }
 * {
-  font-family: Source Code Pro, monospace, courier new, Courier, special;
+  font-family: "Sometype Mono", "Source Code Pro", monospace, courier new, Courier, "Consolas", special;
   -webkit-tap-highlight-color: transparent;
 }
 .emoji {
@@ -588,7 +588,8 @@ td {
   font-display: swap;
   src: url(https://cdn.glitch.global/32dadb8b-db6a-421e-8c38-70fd74a12607/A1Gothic.ttf?v=1746331739234)
 }
-
+/*Oh boy, here come the google fonts!
+these google fonts have separate font faces for 
 /* cyrillic */
 @font-face {
   font-family: 'Anonymous Pro';
