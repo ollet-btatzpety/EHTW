@@ -229,17 +229,20 @@ function convertToEmote(msg) {
         "Cutive Mono": 18,
         "DM Mono": 18,
         "Fantasque Sans Mono": 18,
-        "Fragment Mono": 16,
         "Fira Code": 18,
         "Fira Mono": 18,
+        "Fixedsys": 17,
+        "Fragment Mono": 16,
         "IBM Plex Mono": 16,
         "Inconsolata": 18,
         "JetBrains Mono": 17,
         "Kode Mono": 17,
         "Lekton": 19,
+        "Libertinus Mono": 16,
         "Lucida Sans Mono": 16,
         "Martian Mono": 15,
         "MS Gothic Neue": 18,
+        "Monofur": 18,
         "monospace": 18,
         "Nanum Gothic Coding": 19,
         "Noto Sans Mono": 16,
@@ -409,7 +412,7 @@ function convertToEmote(msg) {
       ];
     var monochromeColor = [0],
         lightColor = [4,29,24,8,25,10,26,27,3,2],
-        normalColor = [15,5,7,9,18,11,20,13,21,1],
+        normalColor = [15,5,7,9,18,11,20,13,21,1,0],
         darkColor = [23,6,22,16,17,12,19,14,28,30];
     function ve(e) {
       for (var t = n, r = 0; r < se["length"]; r++) if (fe[r] == e) return r;
@@ -3687,7 +3690,7 @@ function convertToEmote(msg) {
           normalcolourlist["classList"]["add"]("small-scrollbar")
           normalcolourlist["classList"]["add"]("colourlist")
           var normalcolourtext = document.createElement("div");
-          normalcolourtext.innerText = "Normal";
+          normalcolourtext.innerText = "";
           normalcolourlist["classList"]["add"]("colourtext");
           for (let i = 0; i < normalColor.length; i++) {
             var normal = document.createElement("div");
@@ -3729,7 +3732,6 @@ function convertToEmote(msg) {
           break;
       }
     }
-    addColors("mono");
     addColors("dark");
     addColors("normal");
     addColors("light");
@@ -4170,7 +4172,7 @@ function convertToEmote(msg) {
     function Lr(e) {
       var t = n;
       if ("" == (e = decodeURI(e["toLowerCase"]())) || "@main" == e)
-        return { x: 0, y: 0 };
+        return { x: 0, y: 5 };
       if ("rules" == e)
         return { x: 0, y: 0 };
       var r = (function (e) {
