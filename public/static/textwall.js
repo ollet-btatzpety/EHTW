@@ -1221,7 +1221,7 @@ function convertToEmote(msg) {
                         16 & T &&
                         e["fillRect"](
                           Math["floor"](w - 0.5 * y),
-                          Math["round"](M + 2.5 * y),
+                          Math["round"](M + 0.5 * y),
                           Math["ceil"](11 * y),
                           Math["ceil"](y)
                         ),
@@ -3540,7 +3540,7 @@ function convertToEmote(msg) {
                 var v =
                     ((s = a[n]),
                     (d = s["codePointAt"]()),
-                    ((d -= d < ue ? 65 : ue) < 0 || d > 495) && (d = 0),
+                    ((d -= d < ue ? 65 : ue) < 0 || d > 991) && (d = 0),
                     d),
                   [m, h] = Zr(v);
                 Qn(f, h) || mr(m), le(h);
