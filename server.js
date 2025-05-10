@@ -103,7 +103,7 @@ var colours = colors; //british spellign
 const oauth = new DiscordOauth2({
   clientId: process.env.clientid,
   clientSecret: process.env.clientsecret,
-  redirectUri: "https://unitextwall.glitch.me/authorized.html",
+  redirectUri: "https://ehtw.glitch.me/authorized.html",
 });
 
 // for goatway to receive messages from discord and send them to ehtw
@@ -265,7 +265,7 @@ function adminStuff(req, res, next) {
       httpOnly: true,
     });
     res.send(
-      "You now have the admin cookie, you can access Uni's TextWall while it's in maintenance mode with this special cookie!"
+      "You now have the admin cookie, you can access EHTW while it's in maintenance mode with this special cookie!"
     );
     return;
   }
@@ -798,7 +798,7 @@ function init_ws() {
     if (connObj[0] >= 3) {
       console.warn("DoS alert! IP: " + ipAddr);
       webhookSend(process.env.dosalerturl, {
-       content: "<@836988339491962881>, <https://ipinfo.io/" + ipAddr + "> thanks <https://unitextwall.glitch.me/>"
+       content: "<@836988339491962881>, <https://ipinfo.io/" + ipAddr + "> thanks <https://ehtw.glitch.me/authorized.html/>"
       });
       ws.close();
       return; // what
