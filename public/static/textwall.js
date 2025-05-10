@@ -3625,23 +3625,19 @@ function convertToEmote(msg) {
     var lr = 0;
     var colorShown = true;
     function ur(e) {
+      var colorList = document.getElementsByClassName("colours")[0];
       var t = n;
       switch (
         (ie(!1), ((2 == e && 2 == lr) || (1 == e && 1 == lr)) && (e = 0), e)
       ) {
         case 0:
           x.style["transform"] = "translateX(-105%)";
+          colorShown = false
           colorList.classList.add("hidden")
           break;
         case 1:
-          var colorList = document.getElementsByClassName("colours")[0];
-          colorShown = !colorShown
-          if (colorShown) {
-            colorList.classList.remove("hidden")
-          } else {
-            colorList.classList.add("hidden")
-          }
-          console.log(colorShown)
+          colorShown = true
+          colorList.classList.remove("hidden")
           break;
         default:
           (x.style.transform = "translateX(0px)"),
