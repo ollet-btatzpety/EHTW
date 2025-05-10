@@ -1800,6 +1800,8 @@ function convertToEmote(msg) {
               e["ctrlKey"] &&
                 (e["preventDefault"](), br("strikethrough"), ie(!0));
               break;
+            case 88:
+              e["ctrlKey"] && (e["preventDefault"](), Vn(" ", 0, !1, !0), nr());
             case 18:
               e["preventDefault"]();
               break;
