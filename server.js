@@ -129,7 +129,7 @@ client.on("ready", async () => {
   try {
     await guild.commands.set([
       {
-        name: "ehtwonline",
+        name: "ehtw online",
         description: "Get the number of people online",
       },
       {
@@ -137,11 +137,11 @@ client.on("ready", async () => {
         description: "Get a list of commands",
       },
       {
-        name: "ehtwuptime",
+        name: "ehtw uptime",
         description: "See how long the server has been up for",
       },
       {
-        name: "ehtwstop",
+        name: "ehtw stop",
         description: "Stop the site's server",
       },
     ]);
