@@ -229,16 +229,14 @@ function convertToEmote(msg) {
         "Cutive Mono": 18,
         "DM Mono": 18,
         "Fantasque Sans Mono": 18,
+        "Fragment Mono": 16,
         "Fira Code": 18,
         "Fira Mono": 18,
-        "Fixedsys": 15,
-        "Fragment Mono": 16,
         "IBM Plex Mono": 16,
         "Inconsolata": 18,
         "JetBrains Mono": 17,
         "Kode Mono": 17,
         "Lekton": 19,
-        "Libertinus Mono": 17,
         "Lucida Sans Mono": 16,
         "Martian Mono": 15,
         "MS Gothic Neue": 18,
@@ -411,7 +409,7 @@ function convertToEmote(msg) {
       ];
     var monochromeColor = [0],
         lightColor = [4,29,24,8,25,10,26,27,3,2],
-        normalColor = [15,5,7,9,18,11,20,13,21,1,0],
+        normalColor = [15,5,7,9,18,11,20,13,21,1],
         darkColor = [23,6,22,16,17,12,19,14,28,30];
     function ve(e) {
       for (var t = n, r = 0; r < se["length"]; r++) if (fe[r] == e) return r;
@@ -602,7 +600,7 @@ function convertToEmote(msg) {
           localStorage["setItem"]("customfontsize", i),
           (o = '"' + (o || "monospace") + '"'))
         : D.classList["add"]("hidden"),
-        (Q = Math["floor"](i * v) + "px " + o + ", Source Code Pro, Courier New, monospace, Special"),
+        (Q = Math["floor"](i * v) + "px " + o + ", monospace, Special"),
         localStorage["setItem"]("font", G),
         (document.getElementById("fontselect")["value"] = G),
         (ge = !0);
@@ -3643,6 +3641,7 @@ function convertToEmote(msg) {
           monocolourlist["classList"]["add"]("small-scrollbar");
           monocolourlist["classList"]["add"]("colourlist");
           var monocolourtext = document.createElement("div");
+          monocolourtext.innerText = "Mono";
           monocolourlist["classList"]["add"]("colourtext");
           for (let i = 0; i < monochromeColor.length; i++) {
             var mono = document.createElement("div");
@@ -3665,6 +3664,8 @@ function convertToEmote(msg) {
           lightcolourlist["classList"]["add"]("small-scrollbar")
           lightcolourlist["classList"]["add"]("colourlist")
           var lightcolourtext = document.createElement("div");
+          lightcolourtext.innerText = "Light";
+          lightcolourlist["classList"]["add"]("colourtext");
           for (let i = 0; i < lightColor.length; i++) {
             var light = document.createElement("div");
             light["classList"]["add"]("colour")
@@ -3686,7 +3687,7 @@ function convertToEmote(msg) {
           normalcolourlist["classList"]["add"]("small-scrollbar")
           normalcolourlist["classList"]["add"]("colourlist")
           var normalcolourtext = document.createElement("div");
-          normalcolourtext.innerText = "";
+          normalcolourtext.innerText = "Normal";
           normalcolourlist["classList"]["add"]("colourtext");
           for (let i = 0; i < normalColor.length; i++) {
             var normal = document.createElement("div");
@@ -3709,6 +3710,7 @@ function convertToEmote(msg) {
           darkcolourlist["classList"]["add"]("small-scrollbar")
           darkcolourlist["classList"]["add"]("colourlist")
           var darkcolourtext = document.createElement("div");
+          darkcolourtext.innerText = "Dark";
           darkcolourlist["classList"]["add"]("colourtext");
           for (let i = 0; i < darkColor.length; i++) {
             var dark = document.createElement("div");
@@ -3727,6 +3729,7 @@ function convertToEmote(msg) {
           break;
       }
     }
+    addColors("mono");
     addColors("dark");
     addColors("normal");
     addColors("light");

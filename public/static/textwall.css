@@ -5,7 +5,7 @@ body {
   position: static;
 }
 * {
-  font-family: "Sometype Mono", "Source Code Pro", monospace, courier new, Courier, "Consolas", special;
+  font-family: Source Code Pro, monospace, courier new, Courier, special;
   -webkit-tap-highlight-color: transparent;
 }
 .emoji {
@@ -523,6 +523,26 @@ td {
   font-family: special;
   src: url(https://cdn.glitch.global/32dadb8b-db6a-421e-8c38-70fd74a12607/special.ttf?v=1746102482410);
   }
+/* lucida sans mono */
+@font-face {
+  font-family: lucida sans mono;
+  src: url(https://cdn.glitch.global/32dadb8b-db6a-421e-8c38-70fd74a12607/LucidaSansT-Regular.TTF?v=1746593936691);
+}
+@font-face {
+  font-family: lucida sans mono;
+  src: url(https://cdn.glitch.global/32dadb8b-db6a-421e-8c38-70fd74a12607/LucidaSansT-Bold.TTF?v=1746593921089);
+  font-weight: 700;
+}
+@font-face {
+  font-family: lucida sans mono;
+  src: url(https://cdn.glitch.global/32dadb8b-db6a-421e-8c38-70fd74a12607/LucidaSansT-Italic.TTF?v=1746593934206);
+  font-style: italic;
+}
+@font-face {
+  font-family: lucida sans mono;
+  src: url(https://cdn.glitch.global/32dadb8b-db6a-421e-8c38-70fd74a12607/LucidaSansT-BoldItalic.TTF?v=1746593932616);
+  font-weight: 700;
+  font-style: italic;
 }
 /* fantasque sans mono */
 @font-face {
@@ -545,53 +565,9 @@ td {
   font-weight: 700;
   font-style: oblique;
 }
+/* ms gothic */
 @font-face {
-  font-family: fixedsys;
-  src: url(fonts/fixedsys.ttf);
-}
-@font-face {
-  font-family: libertinus mono;
-  src: url(fonts/LibertinusMono-Regular.ttf);
-}
-@font-face {
-  font-family: libertinus mono;
-  src: url(fonts/LibertinusMono-Bold.ttf);
-  font-weight: 700;
-}
-/* lucida sans mono */
-@font-face {
-  font-family: lucida sans mono;
-  src: url(https://cdn.glitch.global/32dadb8b-db6a-421e-8c38-70fd74a12607/LucidaSansT-Regular.TTF?v=1746593936691);
-}
-@font-face {
-  font-family: lucida sans mono;
-  src: url(https://cdn.glitch.global/32dadb8b-db6a-421e-8c38-70fd74a12607/LucidaSansT-Bold.TTF?v=1746593921089);
-  font-weight: 700;
-}
-@font-face {
-  font-family: lucida sans mono;
-  src: url(https://cdn.glitch.global/32dadb8b-db6a-421e-8c38-70fd74a12607/LucidaSansT-Italic.TTF?v=1746593934206);
-  font-style: italic;
-}
-@font-face {
-  font-family: lucida sans mono;
-  src: url(https://cdn.glitch.global/32dadb8b-db6a-421e-8c38-70fd74a12607/LucidaSansT-BoldItalic.TTF?v=1746593932616);
-  font-weight: 700;
-  font-style: italic;
-
-/* monofur */
-@font-face {
-  font-family: monofur;
-  src: url(fonts/monof55.ttf);
-}
-@font-face {
-  font-family: monofur;
-  src: url(fonts/monof56.ttf);
-  font-style: italic;
-}
-/* ms gothic neue */
-@font-face {
-  font-family: ms gothic neue;
+  font-family: 'MS Gothic Neue';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -599,24 +575,21 @@ td {
 }
 /* segoe mono boot */
 @font-face {
-  font-family: segoe mono boot;
+  font-family: 'Segoe Mono Boot';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: url(https://cdn.glitch.global/32dadb8b-db6a-421e-8c38-70fd74a12607/segmono_boot.ttf?v=1744186382494)
 }
 @font-face {
-  font-family: yu mono gothic;
+  font-family: 'Yu Mono Gothic';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: url(https://cdn.glitch.global/32dadb8b-db6a-421e-8c38-70fd74a12607/A1Gothic.ttf?v=1746331739234)
 }
-/*Oh boy, here come the google fonts!
-these google fonts have separate font faces for Unicode ranges, so the code will be pretty long.
-  Anonymous Pro
-    cyrillic
-*/
+
+/* cyrillic */
 @font-face {
   font-family: 'Anonymous Pro';
   font-style: italic;
