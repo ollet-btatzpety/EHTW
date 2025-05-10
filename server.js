@@ -129,7 +129,7 @@ client.on("ready", async () => {
   try {
     await guild.commands.set([
       {
-        name: "online",
+        name: "ehtwonline",
         description: "Get the number of people online",
       },
       {
@@ -137,11 +137,11 @@ client.on("ready", async () => {
         description: "Get a list of commands",
       },
       {
-        name: "uptime",
+        name: "ehtwuptime",
         description: "See how long the server has been up for",
       },
       {
-        name: "stop",
+        name: "ehtwstop",
         description: "Stop the site's server",
       },
     ]);
@@ -157,7 +157,7 @@ client.on("interactionCreate", async (interaction) => {
 
   const { commandName } = interaction;
   // online
-  if (commandName === "online") {
+  if (commandName === "ehtwonline") {
     var mainWallCount = 0;
     wss.clients.forEach((sock) => {
       if (sock.sdata.connectedWorldId == 1) mainWallCount++;
@@ -174,14 +174,14 @@ client.on("interactionCreate", async (interaction) => {
       ephemeral: true
     });
     // uptime
-  } else if (commandName === "uptime") {
+  } else if (commandName === "ehtwuptime") {
       interaction.reply({
         content:
         "The server has been up since <t:" + uptime + ":f>, which was <t:" + uptime + ":R>.",
         ephermeral: true
       });
     // stop
-  } else if (commandName === "stop") {
+  } else if (commandName === "ehtwstop") {
     if (!discordAdmins.includes(interaction.user.username)) {
       interaction.reply({ content: ":x: You are not an admin of this server.", ephermeral: true });
       return;
@@ -190,7 +190,7 @@ client.on("interactionCreate", async (interaction) => {
   }
   });
 // login to the bot
-//client.login(process.env.discordbottoken);
+client.login(process.env.discordbottoken);
 client.on("messageCreate", (msg) => {
   if (msg.channelId != "1312747123028000849" || msg.author.bot || !msg.content)
     return;
