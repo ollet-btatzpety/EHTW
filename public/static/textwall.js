@@ -406,10 +406,7 @@ function convertToEmote(msg) {
         "beige",
         "dark grey",
       ],
-      fe = [
-        0, 30, 1, 2, 23, 15, 4, 6, 5, 29, 22, 7, 24, 16, 9, 8, 17, 18, 25, 12, 11, 10, 19,
-        20, 26, 14, 13, 27, 28, 21, 3
-      ];
+      fe = [23,6,22,16,17,12,19,14,28,30,15,5,7,9,18,11,20,13,21,1,0,4,29,24,8,25,10,26,27,3,2];
     var monochromeColor = [0],
         lightColor = [4,29,24,8,25,10,26,27,3,2],
         normalColor = [15,5,7,9,18,11,20,13,21,1,0],
@@ -3634,6 +3631,7 @@ function convertToEmote(msg) {
       ) {
         case 0:
           x.style["transform"] = "translateX(-105%)";
+          colorList.classList.add("hidden")
           break;
         case 1:
           var colorList = document.getElementsByClassName("colours")[0];
