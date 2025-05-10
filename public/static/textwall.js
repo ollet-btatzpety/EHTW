@@ -1861,7 +1861,7 @@ function convertToEmote(msg) {
           ar(r[0]),
             e["preventDefault"](),
             e["clipboardData"] || ir("Cut character.", 1e3);
-          Vn
+          Vn("")
           var a = document["getElementById"]("copyico");
           (a["src"] = "/static/done.svg"),
             setTimeout(function () {
