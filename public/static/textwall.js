@@ -2136,7 +2136,7 @@ function convertToEmote(msg) {
       ),
       document["getElementById"]("sendmsg")["addEventListener"]("click", bn),
       document["getElementById"]("chatmsg")["addEventListener"](
-        "keyup",
+        "keydown",
         function (e) {
           13 == e["keyCode"] && bn(e);
         }
@@ -2417,7 +2417,7 @@ function convertToEmote(msg) {
         gn(),
           Xe + 300 > performance["now"]()
             ? (r["value"] = "")
-            : client.chat.send(r["value"]["substr"](0, 400)),
+            : client.chat.send(r["value"]["substr"](0, 700)),
           (Xe = performance["now"]()),
           (r.value = ""),
           r.focus();
@@ -4192,7 +4192,7 @@ function convertToEmote(msg) {
       if ("rules" == e)
         return { x: 30, y: -59 };
       if ("unicode" == e)
-        return { x: 1620, y: 801};
+        return { x: 1620, y: -801};
       if ("rare_walls" == e)
         return { x: -20, y: 20};
       if ("rarewalls" == e)
