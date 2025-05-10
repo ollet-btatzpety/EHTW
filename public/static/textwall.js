@@ -1218,6 +1218,13 @@ function convertToEmote(msg) {
                           Math["ceil"](11 * y),
                           Math["ceil"](y)
                         ),
+                        16 & T &&
+                        e["fillRect"](
+                          Math["floor"](w - 0.5 * y),
+                          Math["round"](M + 2.5 * y),
+                          Math["ceil"](11 * y),
+                          Math["ceil"](y)
+                        ),
                         1 & T &&
                           e.fillRect(
                             Math["floor"](w - 0.5 * y),
