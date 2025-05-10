@@ -28,7 +28,7 @@ var port = 8080;
 var loginToType = false;
 var registrationClosed = false;
 var serverClosing = false;
-const admins = ["uni", "falling1"];
+const admins = ["ollet","richard_11729"];
 var uptime = Math.floor(Date.now() / 1000);
 var upfor = new Date().toString();
 // public/static/colors.js
@@ -101,7 +101,7 @@ var colours = colors; //british spellign
 // end of colors.js
 // info for discord bot to work
 const oauth = new DiscordOauth2({
-  clientId: "1201515886683619368",
+  clientId: process.env.clientid,
   clientSecret: process.env.clientsecret,
   redirectUri: "https://unitextwall.glitch.me/authorized.html",
 });
@@ -119,7 +119,7 @@ const client = new Client({
 client.on("ready", async () => {
   console.log("The Discord bot is ready");
   
-  const guildId = "1196101562741825677"; // Replace "YOUR_GUILD_ID" with your guild's ID
+  const guildId = "1246472476167376956"; // Replace "YOUR_GUILD_ID" with your guild's ID
   const guild = client.guilds.cache.get(guildId);
   if (!guild) {
     console.error(`Guild with ID ${guildId} not found.`);
@@ -151,7 +151,7 @@ client.on("ready", async () => {
   }
 });
 
-const discordAdmins = ["falling1", "therealunicat"];
+const discordAdmins = ["hokuto___.","airbus_a390","b_er_73362"];
 client.on("interactionCreate", async (interaction) => {
   if (!interaction.isCommand()) return;
 
@@ -192,7 +192,7 @@ client.on("interactionCreate", async (interaction) => {
 // login to the bot
 //client.login(process.env.discordbottoken);
 client.on("messageCreate", (msg) => {
-  if (msg.channelId != "1202685655054950502" || msg.author.bot || !msg.content)
+  if (msg.channelId != "1312747123028000849" || msg.author.bot || !msg.content)
     return;
   worldBroadcast(
     1,
