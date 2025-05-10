@@ -2488,7 +2488,7 @@ function convertToEmote(msg) {
               ? "textwall" != W
                 ? t
                 : h
-              : t + " |" + Ue + " " + (Ue == 1 ? "person" : "people"));
+              : t + " | " + Ue + " " + (Ue == 1 ? "person" : "people"));
     }
     function Sn(e) {
       var t = n;
