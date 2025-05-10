@@ -3507,7 +3507,7 @@ function convertToEmote(msg) {
       return " " == e || e == V;
     }
     function Qn(e, t) {
-      return Gn(e) && 0 == (2 & t) && 0 == (1 & t);
+      return Gn(e) && 0 == (2 & t) && 0 == (1 & t) && 0 == (16 & t);
     }
     const _n = Math["log"](5 / 3) / 1e3;
     var er = !1;
