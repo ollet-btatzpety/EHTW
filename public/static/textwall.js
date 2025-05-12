@@ -3633,6 +3633,7 @@ function convertToEmote(msg) {
       ) {
         case 0:
           x.style["transform"] = "translateX(-105%)";
+          colorList.style["transform"] = "translateX(-105%)";
           colorShown = false
           colorList.classList.add("hidden")
           break;
@@ -3645,6 +3646,7 @@ function convertToEmote(msg) {
           x.style.transform = "translateX(0px)",
           colorShown = false
           colorList.classList.add("hidden")
+          x.style.transform = "translateX(0px)"
             M["classList"]["contains"]("open") &&
               M["classList"]["remove"]("open");
           
