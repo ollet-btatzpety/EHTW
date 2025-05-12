@@ -181,7 +181,6 @@ function convertToEmote(msg) {
       x = document["getElementById"]("usermenu"),
       w = document["getElementById"]("colourlist"),
       M = document["getElementById"]("teleport");
-      unicopy = document["getElementById"]("unicopy");
     var k = document["getElementById"]("canvas");
     k["removeAttribute"]("id");
     var E = k.getContext("2d", { alpha: !1 });
@@ -1779,9 +1778,6 @@ function convertToEmote(msg) {
             case 67:
               e["altKey"] && or(e);
               break;
-            case 68:
-              e["ctrlKey"] && openNumbermachine();
-              break;
             case 71:
               e["ctrlKey"] && (e["preventDefault"](), dr());
               break;
@@ -2067,12 +2063,6 @@ function convertToEmote(msg) {
           document.getElementById("shortcuts").classList["remove"]("open");
         }
       ),
-      document["getElementById"]("closen").addEventListener(
-        "click",
-        function () {
-          document.getElementById("unicopy").classList["remove"]("open");
-        }
-      ),
       document
         .getElementById("tpwordgo")
         ["addEventListener"]("click", function (e) {
@@ -2114,14 +2104,6 @@ function convertToEmote(msg) {
             M["classList"]["remove"]("open"),
             r["blur"](),
             a["blur"]());
-        }
-      ),
-      document["getElementById"]("numbergo").addEventListener(
-        "click",
-        function (e) {
-          var t = n;
-          copyunicodeline(document["getElementById"]("unicodenumber"));
-          unicopy["classList"]["remove"]("open")
         }
       ),
       window["addEventListener"]("resize", kn),
@@ -3791,23 +3773,6 @@ function convertToEmote(msg) {
           : (M["classList"]["add"]("open"),
             2 == lr && ur(0),
             document.getElementById("tpword")["focus"]());
-    function openNumberMachine() {
-      var e = n;
-      ie(!1),
-        unicopy["classList"]["contains"]("open")
-          ? (unicopy.classList["remove"]("open"), en())
-          : (unicopy["classList"]["add"]("open"),
-            2 == lr && ur(0),
-            document.getElementById("unicodenumber")["focus"]());
-    }
-    function copyunicodeline(e) {
-      tr(
-        e.fromCodePoint +" "+(e+1).fromCodePoint +" "+(e+2).fromCodePoint +" "+(e+3).fromCodePoint +" "+
-        (e+4).fromCodePoint +" "+(e+5).fromCodePoint +" "+(e+6).fromCodePoint +" "+
-        (e+7).fromCodePoint +" "+(e+8).fromCodePoint +" "+(e+9).fromCodePoint +" "+
-        (e+10).fromCodePoint +" "+(e+11).fromCodePoint +" "+(e+12).fromCodePoint +" "+
-        (e+13).fromCodePoint +" "+(e+14).fromCodePoint +" "+(e+15).fromCodePoint
-      )
     }
     function fr(e) {
       return e["replace"](/^\/|\/$/g, "");
