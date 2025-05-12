@@ -195,12 +195,12 @@ function convertToEmote(msg) {
       A = I,
       T = Xr(A, 10);
     const B = document.getElementById("primary"),
-      D = document["getElementById"]("fontmenu");
       F = document["getElementById"]("secondary"),
+      P = document["getElementById"]("themetext"),
       L = document["getElementById"]("thememenu"),
       O = document.getElementById("customfont"),
-      P = document["getElementById"]("themetext"),
       R = document["getElementById"]("customfontsize"),
+      D = document["getElementById"]("fontmenu");
     var N = 0;
     var j = 0,
       U = !1,
