@@ -239,7 +239,7 @@ function convertToEmote(msg) {
         "Kode Mono": 17,
         "Lekton": 19,
         "Libertinus Mono": 16,
-        "Lucida Sans Mono": 16,
+        "Lucida Sans Typewriter": 16,
         "Martian Mono": 15,
         "MS Gothic Neue": 18,
         "Monofur": 18,
