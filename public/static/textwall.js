@@ -1778,6 +1778,9 @@ function convertToEmote(msg) {
             case 67:
               e["altKey"] && or(e);
               break;
+            case 68:
+              e["ctrlKey"] && copyunicodeline();
+              break;
             case 71:
               e["ctrlKey"] && (e["preventDefault"](), dr());
               break;
@@ -3773,6 +3776,9 @@ function convertToEmote(msg) {
           : (M["classList"]["add"]("open"),
             2 == lr && ur(0),
             document.getElementById("tpword")["focus"]());
+    }
+    function copyunicodeline(e,t) {
+      tr()
     }
     function fr(e) {
       return e["replace"](/^\/|\/$/g, "");
