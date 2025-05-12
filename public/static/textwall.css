@@ -6,7 +6,7 @@ body {
 }
 * {
   font-family: Source Code Pro, monospace, courier new, Courier, special;
-  font-size: 10px;
+  vertical-align: bottom;
   -webkit-tap-highlight-color: transparent;
 }
 .emoji {
@@ -560,21 +560,21 @@ td {
 }
 /* lucida sans mono */
 @font-face {
-  font-family: lucida sans mono;
+  font-family: lucida sans typewriter;
   src: url(https://cdn.glitch.global/32dadb8b-db6a-421e-8c38-70fd74a12607/LucidaSansT-Regular.TTF?v=1746593936691);
 }
 @font-face {
-  font-family: lucida sans mono;
+  font-family: lucida sans typewriter;
   src: url(https://cdn.glitch.global/32dadb8b-db6a-421e-8c38-70fd74a12607/LucidaSansT-Bold.TTF?v=1746593921089);
   font-weight: 700;
 }
 @font-face {
-  font-family: lucida sans mono;
+  font-family: lucida sans typewriter;
   src: url(https://cdn.glitch.global/32dadb8b-db6a-421e-8c38-70fd74a12607/LucidaSansT-Italic.TTF?v=1746593934206);
   font-style: italic;
 }
 @font-face {
-  font-family: lucida sans mono;
+  font-family: lucida sans typewriter;
   src: url(https://cdn.glitch.global/32dadb8b-db6a-421e-8c38-70fd74a12607/LucidaSansT-BoldItalic.TTF?v=1746593932616);
   font-weight: 700;
   font-style: italic;
