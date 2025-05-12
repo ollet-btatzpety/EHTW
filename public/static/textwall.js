@@ -3376,6 +3376,7 @@ function convertToEmote(msg) {
           (E = I),
           Gn(L) &&
             Gn(k) &&
+            (16 & M) == (16 & E) &&
             (2 & M) == (2 & E) &&
             (1 & M) == (1 & E) &&
             F == client.color) ||
@@ -3472,6 +3473,7 @@ function convertToEmote(msg) {
           (E = I),
           Gn(L) &&
             Gn(k) &&
+            (16 & M) == (16 & E) &&
             (2 & M) == (2 & E) &&
             (1 & M) == (1 & E) &&
             F == client.color) ||
