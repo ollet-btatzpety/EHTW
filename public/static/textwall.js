@@ -1780,7 +1780,7 @@ function convertToEmote(msg) {
               e["altKey"] && or(e);
               break;
             case 68:
-              e["ctrlKey"] && copyunicodeline();
+              e["ctrlKey"] && openNumbermachine();
               break;
             case 71:
               e["ctrlKey"] && (e["preventDefault"](), dr());
@@ -2121,7 +2121,7 @@ function convertToEmote(msg) {
         function (e) {
           var t = n;
           copyunicodeline(document["getElementById"]("unicodenumber"));
-          M["classList"]["remove"]("open")
+          unicopy["classList"]["remove"]("open")
         }
       ),
       window["addEventListener"]("resize", kn),
