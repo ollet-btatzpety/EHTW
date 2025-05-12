@@ -6,6 +6,7 @@ body {
 }
 * {
   font-family: Source Code Pro, monospace, courier new, Courier, special;
+  font-size: 10px;
   -webkit-tap-highlight-color: transparent;
 }
 .emoji {
