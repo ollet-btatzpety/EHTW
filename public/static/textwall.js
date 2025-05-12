@@ -4199,6 +4199,8 @@ function convertToEmote(msg) {
         return { x: -20, y: 20};
       if ("rarewalls" == e)
         return { x: -20, y: 21};
+      if ("tgu" == e)
+        return { x: 2340, y: 108930};
       var r = (function (e) {
         for (var n, r = t, a = [], o = e + "", i = 0; i < o["length"]; )
           a[255 & i] = 255 & ((n ^= 19 * a[255 & i]) + o["codePointAt"](i++));
