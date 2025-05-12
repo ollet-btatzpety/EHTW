@@ -181,6 +181,7 @@ function convertToEmote(msg) {
       x = document["getElementById"]("usermenu"),
       w = document["getElementById"]("colourlist"),
       M = document["getElementById"]("teleport");
+      unicopy = document["getElementById"]("unicopy");
     var k = document["getElementById"]("canvas");
     k["removeAttribute"]("id");
     var E = k.getContext("2d", { alpha: !1 });
@@ -2066,6 +2067,12 @@ function convertToEmote(msg) {
           document.getElementById("shortcuts").classList["remove"]("open");
         }
       ),
+      document["getElementById"]("closen").addEventListener(
+        "click",
+        function () {
+          document.getElementById("unicopy").classList["remove"]("open");
+        }
+      ),
       document
         .getElementById("tpwordgo")
         ["addEventListener"]("click", function (e) {
@@ -2107,6 +2114,14 @@ function convertToEmote(msg) {
             M["classList"]["remove"]("open"),
             r["blur"](),
             a["blur"]());
+        }
+      ),
+      document["getElementById"]("numbergo").addEventListener(
+        "click",
+        function (e) {
+          var t = n;
+          copyunicodeline(document["getElementById"]("unicodenumber"));
+          M["classList"]["remove"]("open")
         }
       ),
       window["addEventListener"]("resize", kn),
