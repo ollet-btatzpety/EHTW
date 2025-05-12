@@ -3776,9 +3776,23 @@ function convertToEmote(msg) {
           : (M["classList"]["add"]("open"),
             2 == lr && ur(0),
             document.getElementById("tpword")["focus"]());
+    function openNumberMachine() {
+      var e = n;
+      ie(!1),
+        unicopy["classList"]["contains"]("open")
+          ? (unicopy.classList["remove"]("open"), en())
+          : (unicopy["classList"]["add"]("open"),
+            2 == lr && ur(0),
+            document.getElementById("unicodenumber")["focus"]());
     }
-    function copyunicodeline(e,t) {
-      tr()
+    function copyunicodeline(e) {
+      tr(
+        e.fromCodePoint +" "+(e+1).fromCodePoint +" "+(e+2).fromCodePoint +" "+(e+3).fromCodePoint +" "+
+        (e+4).fromCodePoint +" "+(e+5).fromCodePoint +" "+(e+6).fromCodePoint +" "+
+        (e+7).fromCodePoint +" "+(e+8).fromCodePoint +" "+(e+9).fromCodePoint +" "+
+        (e+10).fromCodePoint +" "+(e+11).fromCodePoint +" "+(e+12).fromCodePoint +" "+
+        (e+13).fromCodePoint +" "+(e+14).fromCodePoint +" "+(e+15).fromCodePoint
+      )
     }
     function fr(e) {
       return e["replace"](/^\/|\/$/g, "");
