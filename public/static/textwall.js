@@ -3653,6 +3653,8 @@ function convertToEmote(msg) {
           x.style["transform"] = "translateX(-105%)"
           colorShown = true
           colorList.classList.remove("hidden")
+            M["classList"]["contains"]("open") &&
+              M["classList"]["remove"]("open");
           break;
         default:
           x.style.transform = "translateX(0px)",
