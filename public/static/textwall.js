@@ -601,7 +601,11 @@ function convertToEmote(msg) {
           localStorage["setItem"]("customfontsize", i),
           (o = '"' + (o || "monospace") + '"'))
         : D.classList["add"]("hidden"),
-        (Q = Math["floor"](i * v) + "px " + o + ", monospace, Special"),
+        (Q = Math["floor"](i * v) + "px " + o + 
+         (o == "Ubuntu Sans Mono" ? ", Ubuntu Mono" :
+           (o == "Courier Prime" ? ", Courier New" :
+             (o == "Cousine" ? ", Courier New" :""))) +
+         ", Source Code Pro, monospace, Special"),
         localStorage["setItem"]("font", G),
         (document.getElementById("fontselect")["value"] = G),
         (ge = !0);
