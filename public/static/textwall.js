@@ -686,7 +686,7 @@ function convertToEmote(msg) {
             [a]
           ),
           E["fill"](),
-          (E["fillStyle"] = "#000000"),
+          (E["fillStyle"] = "#FFFFFF"),
           E.fillText(
             e,
             Math.round(t - i["width"] / 2 + 5 * v),
