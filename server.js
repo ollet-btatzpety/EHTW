@@ -1242,7 +1242,6 @@ function init_ws() {
         // Mute people command
         if (cmd == "/mute" && sdata.isAdmin) {
           var id = parseInt(args[0]), muteDuration = parseInt(args[1]);
-          if (isNaN(id)) return serverMessage(ws, "Invalid id");
           var client = getClientById(id);
           if (!client) return serverMessage(ws, "Client not found");
           if (isNaN(muteDuration) || muteDuration < 0) return serverMessage(ws, "Invalid duration");
