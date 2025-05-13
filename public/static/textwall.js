@@ -678,7 +678,7 @@ function convertToEmote(msg) {
         E["fillStyle"] = "rgba(34, 34, 34, 0.4)";
         var i = E["measureText"](e);
         E.beginPath(),
-          E.roundRect(
+          E.fillRect(
             Math["round"](t - i.width / 2),
             Math["round"](r + 21 * v),
             Math["round"](i["width"] + 10 * v),
@@ -686,7 +686,7 @@ function convertToEmote(msg) {
             [a]
           ),
           E["fill"](),
-          (E["fillStyle"] = "#FFFFFF"),
+          (E["fillStyle"] = "#000000"),
           E.fillText(
             e,
             Math.round(t - i["width"] / 2 + 5 * v),
