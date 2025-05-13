@@ -37,9 +37,6 @@ var colors = {
   "28": "magenta",
   "29": "beige",
   "30": "dark grey",
-  "31": "magenta",
-  "32": "beige",
-  "33": "dark grey",
   "black": 0,
   "grey": 1,
   "light grey": 2,
@@ -71,9 +68,6 @@ var colors = {
   "magenta": 28,
   "beige": 29,
   "dark grey": 30,
-  "magenta": 31,
-  "beige": 32,
-  "dark grey": 33
 };
 var colours = colors; //british spellign
 
@@ -85,7 +79,7 @@ function convertFmt(color, bold, italic, underline, strike) {
 
 // might not be used because getCharInfo already does this for you but just in case
 function parseFmt(chr) {
-	var col = chr % 34;
+	var col = chr % 31;
 	var format = Math.floor(chr / 34);
 	return {
 		color: col,
