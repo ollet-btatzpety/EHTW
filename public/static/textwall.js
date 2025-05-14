@@ -407,11 +407,13 @@ function convertToEmote(msg) {
         "beige",
         "dark grey",
       ],
-      fe = [23,6,22,16,17,12,19,14,28,30,15,5,7,9,18,11,20,13,21,1,0,4,29,24,8,25,10,26,27,3,2];
+      fe = [23,6,22,16,17,12,19,14,28,30,15,5,7,9,18,11,20,13,21,1,0,4,29,24,8,25,10,26,27,3,2],
+      admins = ["@ollet", "@AbECilpOzKaj0347", "@richard", "@richard_11279"];
     var monochromeColor = [0],
         lightColor = [4,29,24,8,25,10,26,27,3,2],
         normalColor = [15,5,7,9,18,11,20,13,21,1,0],
-        darkColor = [23,6,22,16,17,12,19,14,28,30];
+        darkColor = [23,6,22,16,17,12,19,14,28,30],
+        adminlist = ["@ollet", "@AbECilpOzKaj0347", "@richard", "@richard_11279"];
     function ve(e) {
       for (var t = n, r = 0; r < se["length"]; r++) if (fe[r] == e) return r;
       return -1;
@@ -3110,6 +3112,7 @@ function convertToEmote(msg) {
           d.appendChild(f),
           s["appendChild"](d);
       }
+      if ((W["toLowerCase"]() == je["toLowerCase"]()) || (W == "textwall")) {
         var m = q["appendChild"](document["createElement"]("form"));
         (m.style["display"] = "flex"),
           (m.style["justifyContent"] = "space-between");
@@ -3130,6 +3133,7 @@ function convertToEmote(msg) {
                 ? (Cn(W, r), Zn(0, 0), M.classList["remove"]("open"))
                 : ir("Invalid wall name", 2e3);
           });
+      }
     }
     function On() {
       var e = n;
@@ -5018,11 +5022,12 @@ document.addEventListener("keydown", function (event) {
 });
 var owner = document.getElementById("owner");
 function checkAdminWall(wall) {
-  if (["@ollet", "@AbECilpOzKaj0347", "@richard", "@richard_11279"].includes(wall)) {
+  adminlist = admins
+  if (adminlist.includes(wall)) {
     owner.classList.remove("hidden");
     owner.title = `This user is the ${
       wall == "richard" ? "co-" : ""
-    }owner of RichardWall`;
+    }owner of EHTW`;
   } else {
     owner.classList.add("hidden");
   }
