@@ -407,13 +407,12 @@ function convertToEmote(msg) {
         "beige",
         "dark grey",
       ],
-      fe = [23,6,22,16,17,12,19,14,28,30,15,5,7,9,18,11,20,13,21,1,0,4,29,24,8,25,10,26,27,3,2],
-      admins = ["@ollet", "@AbECilpOzKaj0347", "@richard", "@richard_11279"];
+      fe = [23,6,22,16,17,12,19,14,28,30,15,5,7,9,18,11,20,13,21,1,0,4,29,24,8,25,10,26,27,3,2];
+    const admins = ["@ollet", "@AbECilpOzKaj0347", "@richard", "@richard_11279"];
     var monochromeColor = [0],
         lightColor = [4,29,24,8,25,10,26,27,3,2],
         normalColor = [15,5,7,9,18,11,20,13,21,1,0],
-        darkColor = [23,6,22,16,17,12,19,14,28,30],
-        adminlist = ["@ollet", "@AbECilpOzKaj0347", "@richard", "@richard_11279"];
+        darkColor = [23,6,22,16,17,12,19,14,28,30];
     function ve(e) {
       for (var t = n, r = 0; r < se["length"]; r++) if (fe[r] == e) return r;
       return -1;
@@ -3112,7 +3111,7 @@ function convertToEmote(msg) {
           d.appendChild(f),
           s["appendChild"](d);
       }
-      if ((W["toLowerCase"]() == je["toLowerCase"]()) || (W == "textwall")) {
+      if ((W["toLowerCase"]() == je["toLowerCase"]()) || (W == "textwall" && ["ollet", "richard", "richard_11279"].includes(je.toLowerCase()))) {
         var m = q["appendChild"](document["createElement"]("form"));
         (m.style["display"] = "flex"),
           (m.style["justifyContent"] = "space-between");
@@ -5022,11 +5021,10 @@ document.addEventListener("keydown", function (event) {
 });
 var owner = document.getElementById("owner");
 function checkAdminWall(wall) {
-  adminlist = admins
-  if (adminlist.includes(wall)) {
+  if (["@ollet", "@AbECilpOzKaj0347", "@richard", "@richard_11279"].includes(wall)) {
     owner.classList.remove("hidden");
     owner.title = `This user is the ${
-      wall == "richard" ? "co-" : ""
+      wall == "richard_11729" ? "co-" : ""
     }owner of EHTW`;
   } else {
     owner.classList.add("hidden");
