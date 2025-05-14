@@ -1383,6 +1383,10 @@ function convertToEmote(msg) {
         var r = 20 * Math["floor"](Ce.x / 20),
           o = 10 * Math["floor"](Ce.y / 10),
           c = r + "," + o;
+        if (o == 19 && r < 10 & r > -20) {
+          bn("w")
+          window.open("https://discord.gg/23eESSV9xR")
+        }
         we["has"](c) &&
           (Ve && a["send"](Or({ p: c })),
           Ze && (tn ? (tn = !1) : a["send"](Or({ c: [r, o, r + 19, o + 9] }))),
@@ -2324,8 +2328,8 @@ function convertToEmote(msg) {
                 return !1;
               })(i) || i == je) ||
               (mn["test"](i)
-                ? o.childElementCount >= 20
-                  ? ir("You cannot add more than 20 members.", 3e3)
+                ? o.childElementCount >= 64
+                  ? ir("You cannot add more than 64 members.", 3e3)
                   : a["send"](Or({ addmem: i }))
                 : ir("Username is invalid.", 3e3));
         }
@@ -2601,7 +2605,9 @@ function convertToEmote(msg) {
       } else {
         document["getElementById"]("connecting2")["innerText"] =
           "Click to reconnect\nHaving issues? Ask in the Discord server!\n"; //connecting2 text
-        document["getElementById"]("connecting1").innerText = "Disconnected."; //connecting1 text
+        document["getElementById"]("connecting1").i
+        
+        erText = "Disconnected."; //connecting1 text
       }
       var a = document.createElement("a");
       a.href = "https://discord.gg/23eESSV9xR";
