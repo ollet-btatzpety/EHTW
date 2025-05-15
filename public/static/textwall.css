@@ -430,7 +430,7 @@ td {
 }
 .chatcontainer {
   width: 250px;
-  background-color: rgba(255,255,255, 0.8);
+  background-color: rgba(30,30,30, 0.8);
   border-radius: 0 0 0 5px;
   padding: 10px;
   display: flex;
@@ -442,7 +442,7 @@ td {
   justify-content: stretch;
 }
 #chatbox {
-  background-color: black;
+  background-color: white;
   border-radius: 5px;
   margin-bottom: 5px;
   width: 100%;
@@ -458,7 +458,7 @@ td {
   border-radius: 5px;
   border: none;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255,255,255, 0.8);
   user-select: none;
 }
 #sendmsg {
