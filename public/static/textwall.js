@@ -510,7 +510,7 @@ function convertToEmote(msg) {
       hideCursors: document["getElementById"]("hidecursors"),
       disableChat: document["getElementById"]("disablechat"),
       disableColour: document["getElementById"]("walldisablecolour"),
-      disableBraille: document.getElementById("disablebraille"),
+      // disableBraille: document.getElementById("disablebraille"),
     };
     var rt = 1,
       at = 1,
@@ -2167,7 +2167,18 @@ function convertToEmote(msg) {
               yn["classList"]["remove"]("show"),
               gn());
         }
+        
       ),
+      document["getElementById"]("chatbutton")["addEventListener"](
+        "click",
+        function () {
+          var e = n;
+          hn["classList"]["contains"]("open")
+            ? hn["classList"].remove("open")
+            : (hn["classList"]["add"]("open"),
+              yn["classList"]["remove"]("show"),
+              gn());
+        }),
       document["getElementById"]("sendmsg")["addEventListener"]("click", bn),
       document["getElementById"]("chatmsg")["addEventListener"](
         "keydown",
@@ -2316,10 +2327,11 @@ function convertToEmote(msg) {
         var t = n;
         a["send"](Or({ dcl: e["target"].checked }));
       }),
+        /*
       nt["disableBraille"]["addEventListener"]("click", function (e) {
         var t = n;
         a["send"](Or({ db: e["target"]["checked"] }));
-      }),
+      }), */
       document["getElementById"]("addmemberbtn")["addEventListener"](
         "click",
         function (e) {
@@ -2926,8 +2938,7 @@ function convertToEmote(msg) {
             hr(!!L || tt["disablecolour"]["checked"]);
           break;
         case "db":
-          var O = a.db;
-          nt["disableBraille"]["checked"] = O;
+          var O = false
           break;
         case "l":
           (U = a.l), (document.getElementById("l")["checked"] = a.l), xn();
@@ -2948,8 +2959,8 @@ function convertToEmote(msg) {
               nt["hideCursors"].disabled =
               nt.disableChat["disabled"] =
               nt["disableColour"]["disabled"] =
-              nt["disableBraille"].disabled =
-                !(2 == j || m)),
+              // nt["disableBraille"].disabled =
+               !(2 == j || m)),
             m &&
               (J["style"]["display"] = "textwall" != W || K ? "block" : "none"),
             0 == j && ((Ve = !1), (Ze = !1)),
@@ -3359,7 +3370,7 @@ function convertToEmote(msg) {
       )
         return 0;
       var i = (e = Array.from(e)[0])["codePointAt"]();
-      if (nt["disableBraille"]["checked"] && qr(i)) return 0;
+     // if (nt["disableBraille"]["checked"] && qr(i)) return 0;
       var c = 20 * Math["floor"](Ce.x / 20),
         l = 10 * Math["floor"](Ce.y / 10),
         u = c + "," + l;
@@ -3455,7 +3466,7 @@ function convertToEmote(msg) {
       )
         return 0;
       var i = (e = Array.from(e)[0])["codePointAt"]();
-      if (nt["disableBraille"]["checked"] && qr(i)) return 0;
+    //  if (nt["disableBraille"]["checked"] && qr(i)) return 0;
       var c = 20 * Math["floor"](Ce.x / 20),
         l = 10 * Math["floor"](Ce.y / 10),
         u = c + "," + l;
