@@ -191,12 +191,12 @@ input {
 	background-color: #b9b9b9cc;
 }
 .toolbar-container {
+  border-radius: 100%;
 	max-width: 100%;
 }
 
 .toolbar {
 	background-color: var(--surface-background);
-	border-radius: 5px;
 	max-width: 100%;
 	margin: 8px;
 	padding: 5px;
@@ -240,17 +240,17 @@ input {
 .colour {
 	min-width: 24px;
 	height: 24px;
-  vertical-align: middl;
-	margin: 3px;
-	border-radius: 15%;
+  vertical-align: bottom;
+	margin: 0px;
+	border-radius: 0%;
 	box-sizing: border-box;
 	transition: all 100ms;
 }
 .colour.selected{
-  min-width: 32px;
-	height: 32px;
+  min-width: 24px;
+	height: 24px;
 	border: 3px solid white;
-	border-radius: 50%;
+	border-radius: 0%;
 }
 #zoom {
   width: 150px;
