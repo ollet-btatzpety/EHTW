@@ -557,7 +557,13 @@ td {
   src: url(fonts/LibertinusMono-Bold.ttf);
   font-weight: 700;
 }
-/* lucida sans typewriter*/
+/* lucida mono*/
+@font-face {
+  font-family: lucida console;
+  src: url(https://cdn.glitch.global/32dadb8b-db6a-421e-8c38-70fd74a12607/lucon.ttf?v=1744461409121);
+  font-weight: 700;
+  font-style: italic;
+}
 @font-face {
   font-family: lucida sans typewriter;
   src: url(https://cdn.glitch.global/32dadb8b-db6a-421e-8c38-70fd74a12607/LucidaSansT-Regular.TTF?v=1746593936691);
