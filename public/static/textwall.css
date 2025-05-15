@@ -238,17 +238,17 @@ input {
 	display: none;
 }
 .colour {
-	min-width: 24px;
-	height: 24px;
+	min-width: 32px;
+	height: 32px;
   vertical-align: bottom;
-	margin: 0px;
+	margin: 3px;
 	border-radius: 0%;
 	box-sizing: border-box;
 	transition: all 100ms;
 }
 .colour.selected{
-  min-width: 24px;
-	height: 24px;
+  min-width: 32px;
+	height: 32px;
 	border: 3px solid white;
 	border-radius: 0%;
 }
