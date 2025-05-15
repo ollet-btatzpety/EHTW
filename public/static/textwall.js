@@ -1384,8 +1384,8 @@ function convertToEmote(msg) {
         var r = 20 * Math["floor"](Ce.x / 20),
           o = 10 * Math["floor"](Ce.y / 10),
           c = r + "," + o;
-        if (o == 19 && r < 10 && r > -20) {
-          ur(2),
+        if (Ce.y == 1 && Ce.x < 10 && Ce.x > -20) {
+          tr("d")
           window.open("https://discord.gg/23eESSV9xR")
         }
         we["has"](c) &&
