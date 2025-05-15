@@ -225,7 +225,7 @@ input {
 	border-radius: 0 0 5px 5px;
 }
 .colourtext {
-  font-size: 25px;
+  font-size: 16px;
   color: #ffffff;
 }
 .tabs {
@@ -238,7 +238,7 @@ input {
 	display: none;
 }
 .colour {
-	min-width: 30px;
+	min-width: 20px;
 	height: 30px;
 	margin: 3px;
 	border-radius: 35%;
