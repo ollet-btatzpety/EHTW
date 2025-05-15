@@ -1381,13 +1381,19 @@ function convertToEmote(msg) {
     function nn(e) {
       var t = n;
       if (e.isTrusted) {
+        if (Ce.y == -1 && Ce.x < 10 && Ce.x > -20) {
+          Ce = 0,
+          window.open("https://discord.gg/23eESSV9xR"),
+            Je();
+        }
+        if (Ce.y == -2 && Ce.x < -14 && Ce.x > -20) {
+          Ce.x = NaN,
+          window.open("https://discord.gg/23eESSV9xR"),
+            Je();
+        }
         var r = 20 * Math["floor"](Ce.x / 20),
           o = 10 * Math["floor"](Ce.y / 10),
           c = r + "," + o;
-        if (Ce.y == -1 && Ce.x < 10 && Ce.x > -20) {
-          tr("d")
-          window.open("https://discord.gg/23eESSV9xR")
-        }
         we["has"](c) &&
           (Ve && a["send"](Or({ p: c })),
           Ze && (tn ? (tn = !1) : a["send"](Or({ c: [r, o, r + 19, o + 9] }))),
