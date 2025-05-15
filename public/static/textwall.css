@@ -240,6 +240,7 @@ input {
 .colour {
 	min-width: 24px;
 	height: 24px;
+  vertical-align: middl;
 	margin: 3px;
 	border-radius: 15%;
 	box-sizing: border-box;
