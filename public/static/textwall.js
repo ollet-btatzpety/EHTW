@@ -1381,15 +1381,13 @@ function convertToEmote(msg) {
     function nn(e) {
       var t = n;
       if (e.isTrusted) {
-        if (Ce.y == -1 && Ce.x < 10 && Ce.x > -20) {
+        if (Ce.y == -1 && Ce.x < 10 && Ce.x > -20 && Cn("textwall", "main")) {
           Ce = 0,
           window.open("https://discord.gg/23eESSV9xR"),
             Je();
         }
-        if (Ce.y == -2 && Ce.x < -14 && Ce.x > -20) {
-          Ce.x = NaN,
-          window.open("https://discord.gg/23eESSV9xR"),
-            Je();
+        if (Ce.y == -2 && Ce.x < -14 && Ce.x > -20 && Cn("textwall", "main")) {
+          vr("@ollet")
         }
         var r = 20 * Math["floor"](Ce.x / 20),
           o = 10 * Math["floor"](Ce.y / 10),
