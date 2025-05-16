@@ -279,7 +279,7 @@ function convertToEmote(msg) {
         Custom: 20,                                                 
         };
     var G = "Fairfax HD",
-      Q = Math.floor($[G] * v) + "px " + G + ", monospace, Special";
+      Q = Math.floor($[G] * v) + "px " + G + ", monospace, Special, Fairfax HD";
     const _ = new Map();
       _["set"]("Fixed", void 0),
       _["set"]("Terminus", void 0),
