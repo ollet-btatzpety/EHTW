@@ -251,7 +251,7 @@ function convertToEmote(msg) {
         "Libertinus Mono": 16,
         "Lucida Sans Typewriter": 16,
         "Martian Mono": 15,
-        "M PLUS 1 Code": 16,
+        // "M PLUS 1 Code": 16,
         "MS Gothic Neue": 18,
         "Monofur": 18,
         "monospace": 18,
@@ -278,12 +278,12 @@ function convertToEmote(msg) {
         "Yu Mono Gothic": 18,
         Custom: 20,                                                 
         };
-    var G = "Sometype Mono",
+    var G = "Fairfax HD",
       Q = Math.floor($[G] * v) + "px " + G + ", monospace, Special";
     const _ = new Map();
-    _["set"]("Unifont", void 0),
+      _["set"]("Fixed", void 0),
       _["set"]("Terminus", void 0),
-      _["set"]("Fixed", void 0);
+      _["set"]("Unifont", void 0);
     const ee = Object.keys($)["length"],
       te = document["getElementById"]("fontselect");
     for (var ne = 0; te["length"] > 0; ne++);
@@ -1410,7 +1410,8 @@ function convertToEmote(msg) {
           Zn(0,0)
         }
         if (W == "textwall" && Ce.x == -99) {
-          Ce = Lr("wall")
+          var tpwall = Lr("wall")
+          Zn(tpwall.x, -(tpwall.y))
         }
         var r = 20 * Math["floor"](Ce.x / 20),
           o = 10 * Math["floor"](Ce.y / 10),
