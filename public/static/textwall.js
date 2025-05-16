@@ -245,6 +245,8 @@ function convertToEmote(msg) {
         "Geist Mono": 16,
         "IBM Plex Mono": 16,
         "Inconsolata": 18,
+        "Iosevka": 18,
+        "Iosevka Slab": 18,
         "Jetbrains Mono": 17,
         "Kode Mono": 17,
         "Lekton": 19,

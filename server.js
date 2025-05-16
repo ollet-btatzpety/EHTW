@@ -1,5 +1,6 @@
 // Thanks to falling1 for helping out!
 // https://glitch.com/@falling1
+// https://glitch.com/@richardgrechko93309
 var maintenanceMode = 1;
 // 💥 Turn it to "1" to shutdown the server! 💥
 // Restart Server: Use the /stop command
@@ -28,7 +29,7 @@ var port = 8080;
 var loginToType = false;
 var registrationClosed = false;
 var serverClosing = false;
-const admins = ["ollet","richard_11729"];
+const admins = ["ollet","richard_11729", "falling1"];
 var uptime = Math.floor(Date.now() / 1000);
 var upfor = new Date().toString();
 // public/static/colors.js
@@ -56,7 +57,7 @@ var colors = {
   "20": "periwinkle",
   // 20: discord?!?!?!?!?
   "21": "pink",
-  "22": "dark brown",
+  "22": "gold",
   "23": "burgundy",
   "24": "pale yellow",
   "25": "light teal",
