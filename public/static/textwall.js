@@ -3755,7 +3755,7 @@ function convertToEmote(msg) {
           normalcolourlist["classList"]["add"]("small-scrollbar")
           normalcolourlist["classList"]["add"]("colourlist")
           var normalcolourtext = document.createElement("div");
-          normalcolourtext.innerText = "";
+          normalcolourtext.innerText = "Normal";
           normalcolourlist["classList"]["add"]("colourtext");
           for (let i = 0; i < normalColor.length; i++) {
             var normal = document.createElement("div");
