@@ -5,7 +5,7 @@ body {
   position: static;
 }
 * {
-  font-family: Fairfax HD, monospace, courier new, Courier, special;
+  font-family: Chivo Mono, monospace, courier new, Courier, special;
   -webkit-tap-highlight-color: transparent;
 }
 .emoji {
