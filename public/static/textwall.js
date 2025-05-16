@@ -190,8 +190,8 @@ function convertToEmote(msg) {
       (k["style"]["width"] = window["innerWidth"] + "px"),
       (k["style"]["height"] = window["innerHeight"] + "px"),
       (E.imageSmoothingEnabled = !1);
-    const S = "#ffffff",
-      I = "#EBEBEB";
+    const S = "#f0e1fa",
+      I = "#e2c9ec";
     var C = S,
       A = I,
       T = Xr(A, 10);
@@ -3927,8 +3927,8 @@ function convertToEmote(msg) {
           ((xe = !0),
           (document["getElementById"]("themeico")["src"] = "/static/moon.svg"),
           (document["getElementById"]("themeico")["alt"] = "🌙"),
-          (C = "#000000"),
-          (A = "#141414")),
+          (C = "#050008"),
+          (A = "#151119")),
         2 == N
           ? ((xe = P.checked),
             (document.getElementById("themeico")["src"] = "/static/star.svg"),
