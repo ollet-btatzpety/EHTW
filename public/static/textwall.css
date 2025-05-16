@@ -599,7 +599,7 @@ td {
 }
 @font-face {
   font-family: special;
-  src: url(https://cdn.glitch.global/32dadb8b-db6a-421e-8c38-70fd74a12607/special.ttf?v=1746102482410);
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2Fspecial.ttf?v=1747372493270);
 }
 /* fantasque sans mono */
 @font-face {
@@ -675,25 +675,56 @@ td {
 /* ms gothic neue */
 @font-face {
   font-family: ms gothic neue;
-  font-style: normal;
-  font-weight: 400;
   font-display: swap;
   src: url(https://cdn.glitch.global/32dadb8b-db6a-421e-8c38-70fd74a12607/MS-Gothic-Neue.otf?v=1745414903685)
 }
 /* segoe mono boot */
 @font-face {
   font-family: segoe mono boot;
-  font-style: normal;
-  font-weight: 400;
   font-display: swap;
   src: url(https://cdn.glitch.global/32dadb8b-db6a-421e-8c38-70fd74a12607/segmono_boot.ttf?v=1744186382494)
 }
 @font-face {
   font-family: yu mono gothic;
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
   src: url(https://cdn.glitch.global/32dadb8b-db6a-421e-8c38-70fd74a12607/A1Gothic.ttf?v=1746331739234)
+}
+/* ehtw gamma fonts */
+
+/* andal[e] mono*/
+@font-face {
+  font-family: andalé mono;
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2Fandalemono.ttf?v=1747372437697)
+}
+/* courier prime code*/
+@font-face {
+  font-family: courier prime code;
+  src: url()
+}
+@font-face {
+  font-family: courier prime code;
+  font-style: italic;
+  src: url()
+}
+/* courier prime sans*/
+@font-face {
+  font-family: courier prime sans;
+  src: url()
+}
+@font-face {
+  font-family: courier prime sans;
+  font-style: italic;
+  src: url()
+}
+@font-face {
+  font-family: courier prime sans;
+  font-weight: 700;
+  src: url()
+}
+@font-face {
+  font-family: courier prime sans;
+  font-weight: 700;
+  font-style: italic;
+  src: url()
 }
 /* BIG FONT TIME */
 
