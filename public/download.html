@@ -1,33 +1,89 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Download the App</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  <body
-    style="
-      background-color: #202020;
-      color: #ffffff;
-      text-align: center;
+<head>
+  <meta property="og:title" content="EHTW" />
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:description"
+    content="The site is currently down... Sorry!"
+  />
+  <meta property="og:url" content="https://ehtwl.glitch.me/" />
+
+  <meta
+    property="og:image"
+    content="https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/EHTWIP.png?v=1746868841470"
+  />
+  <link
+    rel="icon"
+    sizes="80x80"
+    href="https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/EHTWIP.png?v=1746868841470"
+  />
+  <title>EHTWIP</title>
+  <style>
+    body {
+      background-image: url("https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/singlestripe.png?v=1747309864609");
+      /* https://cdn.glitch.global/2c724c57-2f3d-4ea6-b456-e15fa098a60e/maintenance%20bg%202.png */
+      color: white;
       font-family: sans-serif;
-    "
-  >
-    <h1>Download the App</h1>
-    <small>(or <a href="/">go back)</a></small>
-    <article>
-      <h2>Desktop</h2>
-      <p>
-        (You need Google Chrome or an Chromium browser like Microsoft Edge,
-        Opera, Brave, etc.)<br />
-        Click the small desktop (with an down arrow) icon and click Install.<br />
-      </p>
-      <img
-        src="https://cdn.glitch.global/2c724c57-2f3d-4ea6-b456-e15fa098a60e/0b3f9993-b600-431f-92fb-842c3a7016af.image.png"
-      />
-      <h2>Android</h2>
-      <p>
-        The previous mobile app has been discontinued, On Google Chrome, go to the site and press the 3 vertical dots ( ⋮ ) then click "Add to Home screen" and click "Install"
-      </p>
-    </article>
-  </body>
-</html>
+      font-size: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      justify-content: center;
+      margin: 0;
+      background-position: bottom;
+      text-align: center;
+      background-repeat: repeat-x;
+      background-color: #460082; /*320084*/
+    }
+  </style>
+</head>
+<body>
+  <span>EHTW is currently WIP.</span>
+  <span>We're making new things...</span><br />
+  <audio
+    src="https://cdn.glitch.global/2c724c57-2f3d-4ea6-b456-e15fa098a60e/cqd6i7.mp3"
+  ></audio>
+  <noscript>
+    <small>
+      (You can join the
+      <a href="https://discord.gg/23eESSV9xR" style="color: #0096ff"
+        >Discord server</a
+      >
+      while you wait)<br /></small
+    ><br />
+  </noscript>
+  <iframe
+    src="https://discord.com/widget?id=1246472476167376956&theme=dark"
+    width="350"
+    height="350"
+    allowtransparency="true"
+    frameborder="0"
+    sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+    style="float: left; text-align: left"
+  ></iframe>
+  <script>
+    var audioCtx = new AudioContext();
+    var buffer;
+    fetch(
+      "https://media.discordapp.net/attachments/1063116432646340681/1154782835295670272/vine-boom.mp3"
+    )
+      .then((r) => r.arrayBuffer())
+      .then((r) => audioCtx.decodeAudioData(r))
+      .then((b) => (buffer = b));
+
+    function playVineBoom() {
+      var track = audioCtx.createBufferSource();
+      track.buffer = buffer;
+      track.connect(audioCtx.destination);
+      track.start();
+    }
+    document.addEventListener("touchstart", playVineBoom);
+    document.addEventListener("pointerdown", playVineBoom);
+    document.addEventListener("cut", playVineBoom);
+    document.addEventListener("click", playVineBoom);
+    document.addEventListener("copy", playVineBoom);
+    console.log("EHTWIP.");
+    console.log("Join the Discord Server at https://discord.gg/23eESSV9xR");
+  </script>
+</body>
