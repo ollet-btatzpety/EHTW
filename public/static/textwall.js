@@ -1410,8 +1410,23 @@ function convertToEmote(msg) {
           Zn(0,0)
         }
         if (W == "textwall" && Ce.x == -99) {
-          var tpwall = Lr("wall")
-          Zn(tpwall.x, -(tpwall.y))
+          var tw
+          switch (Ce.y + 58) {
+            case 0:
+              tw = "rules"
+              break;
+            case 1:
+              tw = "shortcuts"
+              break;
+            case 2:
+              tw = "rare_walls"
+              break;
+            case 3:
+              tw = "update"
+              break;
+          }
+          var tpwall = Lr(tw)
+          Zn(tpwall.x, tpwall.y)
         }
         var r = 20 * Math["floor"](Ce.x / 20),
           o = 10 * Math["floor"](Ce.y / 10),
