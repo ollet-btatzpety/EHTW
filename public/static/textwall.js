@@ -236,7 +236,7 @@ function convertToEmote(msg) {
         "DM Mono": 12,
         "Envy Code R": 19,
         "Everson Mono": 16,
-        "Fairfax HD": 18,
+        "Fairfax Special": 18,
         "Fantasque Sans Mono": 18,
         "Fira Code": 18,
         "Fira Mono": 18,
@@ -281,7 +281,7 @@ function convertToEmote(msg) {
         Custom: 20,                                                 
         };
     var G = "Fairfax HD",
-      Q = Math.floor($[G] * v) + "px " + G + ", monospace, Special, Fairfax HD";
+      Q = Math.floor($[G] * v) + "px " + G + ", monospace, Fairfax Special";
     const _ = new Map();
       _["set"]("Fixed", void 0),
       _["set"]("Terminus", void 0),
@@ -623,7 +623,7 @@ function convertToEmote(msg) {
          (o == "Ubuntu Sans Mono" ? ", Ubuntu Mono" :
           (o == "Lucida Sans Typewriter" ? ", Lucida Console" : ""
            )) +
-         ", Source Code Pro, Courier New, monospace, Special"),
+         ", Source Code Pro, Courier New, monospace, Fairfax Special"),
         localStorage["setItem"]("font", G),
         (document.getElementById("fontselect")["value"] = G),
         (ge = !0);
@@ -1191,7 +1191,7 @@ function convertToEmote(msg) {
                          (u >= 58368 && u <= 58879) ||
                           qr(B))
                       )
-                        (e["font"] = Math["round"](20 * y) + "px Special, Fairfax HD"),
+                        (e["font"] = Math["round"](20 * y) + "px Fairfax Special"),
                           e["fillText"](
                             S,
                             Math["round"](w),
