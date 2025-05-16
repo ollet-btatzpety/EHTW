@@ -181,6 +181,7 @@ function convertToEmote(msg) {
       x = document["getElementById"]("usermenu"),
       w = document["getElementById"]("colourlist"),
       M = document["getElementById"]("teleport");
+      buttonlinks = document.getElementsByClassName("buttonlink")[0];
     var k = document["getElementById"]("canvas");
     k["removeAttribute"]("id");
     var E = k.getContext("2d", { alpha: !1 });

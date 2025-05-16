@@ -91,7 +91,7 @@ h3 {
   transition: all 0.5s;
 }
 .tool.infobtn {
-  width: 100%;
+  width: 12px;
 }
 .decoration {
   background-color: #b9b9b9;
