@@ -698,90 +698,90 @@ td {
 /* courier prime code*/
 @font-face {
   font-family: courier prime code;
-  src: url()
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2FCourier%20Prime%20Code.ttf?v=1747372441270)
 }
 @font-face {
   font-family: courier prime code;
   font-style: italic;
-  src: url()
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2FCourier%20Prime%20Code%20Italic.ttf?v=1747372439661)
 }
 /* courier prime sans*/
 @font-face {
   font-family: courier prime sans;
-  src: url()
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2FCourier%20Prime%20Sans.ttf?v=1747372447390)
 }
 @font-face {
   font-family: courier prime sans;
   font-style: italic;
-  src: url()
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2FCourier%20Prime%20Sans%20Italic.ttf?v=1747372446317)
 }
 @font-face {
   font-family: courier prime sans;
   font-weight: 700;
-  src: url()
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2FCourier%20Prime%20Sans%20Bold%20Italic.ttf?v=1747372443897)
 }
 @font-face {
   font-family: courier prime sans;
   font-weight: 700;
   font-style: italic;
-  src: url()
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2FCourier%20Prime%20Sans%20Bold%20Italic.ttf?v=1747372443897)
 }
 /* dejavu sans mono*/
 @font-face {
   font-family: dejavu sans mono;
-  src: url()
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2FDejaVuSansMono.ttf?v=1747372451793)
 }
 @font-face {
   font-family: dejavu sans mono;
   font-style: italic;
-  src: url()
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2FDejaVuSansMono-Oblique.ttf?v=1747372450514)
 }
 @font-face {
   font-family: dejavu sans mono;
   font-weight: 700;
-  src: url()
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2FDejaVuSansMono-Bold.ttf?v=1747372448552)
 }
 @font-face {
   font-family: dejavu sans mono;
   font-weight: 700;
   font-style: italic;
-  src: url()
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2FDejaVuSansMono-BoldOblique.ttf?v=1747372449520)
 }
 /* envy code r */
 @font-face {
   font-family: envy code r;
-  src: url()
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2FEnvy%20Code%20R.ttf?v=1747372457700)
 }
 @font-face {
   font-family: envy code r;
   font-style: italic;
-  src: url()
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2FEnvy%20Code%20R%20Italic.ttf?v=1747372456911)
 }
 @font-face {
   font-family: envy code r;
   font-weight: 700;
-  src: url()
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2FEnvy%20Code%20R%20Bold.ttf?v=1747372455611)
 }
 /* everson mono */
 @font-face {
   font-family: everson mono;
-  src: url()
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2FEverson%20Mono.ttf?v=1747372466989)
 }
 @font-face {
   font-family: everson mono;
   font-style: italic;
-  src: url()
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2FEverson%20Mono%20Oblique.ttf?v=1747372463722)
 }
 @font-face {
   font-family: everson mono;
   font-weight: 700;
-  src: url()
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2FEverson%20Mono%20Bold.ttf?v=1747372461519)
 }
 @font-face {
   font-family: everson mono;
   font-weight: 700;
   font-style: italic;
-  src: url()
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2FEverson%20Mono%20Bold%20Oblique.ttf?v=1747372460067)
 }
 /* fairfax 2 */
 @font-face {
@@ -820,13 +820,23 @@ td {
   src: url()
 }
 @font-face {
-  font-family: iosevka sa;
+  font-family: iosevka slab;
   font-weight: 700;
   src: url()
 }
 @font-face {
-  font-family: iosevka;
+  font-family: iosevka slab;
   font-weight: 700;
   font-style: italic;
+  src: url()
+}
+/* league mono */
+@font-face {
+  font-family: league mono;
+  src: url()
+}
+@font-face {
+  font-family: league mono;
+  font-weight: 700;
   src: url()
 }
