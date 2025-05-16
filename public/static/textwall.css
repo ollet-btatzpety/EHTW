@@ -785,58 +785,58 @@ td {
 }
 /* fairfax 2 */
 @font-face {
-  font-family: "fairfax 2";
-  src: url()
+  font-family: "fairfax hd";
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2FFairfaxHD.ttf?v=1747372468966)
 }
 /* iosevka */
 @font-face {
   font-family: iosevka;
-  src: url()
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2FIosevkaFixed-Regular.ttf?v=1747372478925)
 }
 @font-face {
   font-family: iosevka;
   font-style: italic;
-  src: url()
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2FIosevkaFixed-Italic.ttf?v=1747372475326)
 }
 @font-face {
   font-family: iosevka;
   font-weight: 700;
-  src: url()
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2FIosevkaFixed-Bold.ttf?v=1747372470977)
 }
 @font-face {
   font-family: iosevka;
   font-weight: 700;
   font-style: italic;
-  src: url()
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2FIosevkaFixed-BoldItalic.ttf?v=1747372473095)
 }
 /* iosevka slab */
 @font-face {
   font-family: iosevka slab;
-  src: url()
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2FIosevkaFixedSlab-Regular.ttf?v=1747372490508)
 }
 @font-face {
   font-family: iosevka slab;
   font-style: italic;
-  src: url()
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2FIosevkaFixedSlab-Italic.ttf?v=1747372486028)
 }
 @font-face {
   font-family: iosevka slab;
   font-weight: 700;
-  src: url()
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2FIosevkaFixedSlab-Bold.ttf?v=1747372481692)
 }
 @font-face {
   font-family: iosevka slab;
   font-weight: 700;
   font-style: italic;
-  src: url()
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2FIosevkaFixedSlab-BoldItalic.ttf?v=1747372484066)
 }
 /* league mono */
 @font-face {
   font-family: league mono;
-  src: url()
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2FLeagueMono-Regular.ttf?v=1747372492058)
 }
 @font-face {
   font-family: league mono;
   font-weight: 700;
-  src: url()
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2FLeagueMono-Bold.ttf?v=1747372491281)
 }
