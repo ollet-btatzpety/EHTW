@@ -4274,7 +4274,7 @@ function convertToEmote(msg) {
       if ("update" == e)
         return { x: -19, y: 40};
       if ("random" == e)
-        return { x: 10260, y: -262};
+        return { x: 10260, y: -2620};
       var r = (function (e) {
         for (var n, r = t, a = [], o = e + "", i = 0; i < o["length"]; )
           a[255 & i] = 255 & ((n ^= 19 * a[255 & i]) + o["codePointAt"](i++));
