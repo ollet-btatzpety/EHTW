@@ -2153,18 +2153,7 @@ function convertToEmote(msg) {
         var t = n;
         a && a["readyState"] == a.OPEN && a["send"](e["data"]);
       }),
-      /* document["getElementById"]("chatbutton")["addEventListener"](
-        "click",
-        function () {
-          var e = n;
-          hn["classList"]["contains"]("open")
-            ? hn["classList"].remove("open")
-            : (hn["classList"]["add"]("open"),
-              yn["classList"]["remove"]("show"),
-              gn());
-        }
-      ), */
-       document["getElementById"]("chatbtn")["addEventListener"](
+     /*  document["getElementById"]("chatbtn")["addEventListener"](
         "click",
         function () {
           var e = n;
@@ -2175,7 +2164,7 @@ function convertToEmote(msg) {
               gn());
         }
         
-      ),
+      ), */
       document["getElementById"]("chatbutton")["addEventListener"](
         "click",
         function () {
