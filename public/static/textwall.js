@@ -611,10 +611,9 @@ function convertToEmote(msg) {
         : D.classList["add"]("hidden"),
         (Q = Math["floor"](i * v) + "px " + o + 
          (o == "Ubuntu Sans Mono" ? ", Ubuntu Mono" :
-          (o == "Lucida Sans Typewriter" ? ", Lucida Console" :
-           (o == "Courier Prime" ? ", Courier New" :
-             (o == "Cousine" ? ", Courier New" :"")))) +
-         ", Source Code Pro, monospace, Special"),
+          (o == "Lucida Sans Typewriter" ? ", Lucida Console" : ""
+           )) +
+         ", Source Code Pro, Courier New, monospace, Special"),
         localStorage["setItem"]("font", G),
         (document.getElementById("fontselect")["value"] = G),
         (ge = !0);
@@ -1388,7 +1387,7 @@ function convertToEmote(msg) {
     function nn(e) {
       var t = n;
       if (e.isTrusted) {
-        if (Ce.y == -1 && Ce.x < 10 && Ce.x > -20 && W == "textwall") {
+        if (Ce.y == -1 && Ce.x < 9 && Ce.x > -20 && W == "textwall") {
           Ce = 0,
           window.open("https://discord.gg/23eESSV9xR"),
             Je()
