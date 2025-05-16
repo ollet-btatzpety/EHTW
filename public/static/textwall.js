@@ -5074,17 +5074,6 @@ document.addEventListener("keydown", function (event) {
   }
 });
 var owner = document.getElementById("owner");
-function checkAdminWall(wall) {
-  if (["@ollet", "@AbECilpOzKaj0347", "@richard", "@richard_11279"].includes(wall)) {
-    owner.classList.remove("hidden");
-    owner.title = `This user is the ${
-      wall == "richard_11729" ? "co-" : ""
-    }owner of EHTW`;
-  } else {
-    owner.classList.add("hidden");
-  }
-}
-
 var closeReg = document.getElementById("closereg");
 closeReg.onclick = function() {
   client.sendWsMessage({ closereg: closeReg.checked});
