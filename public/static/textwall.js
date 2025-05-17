@@ -1402,7 +1402,6 @@ function convertToEmote(msg) {
       var t = n;
       if (e.isTrusted) {
         if (Ce.y == -1 && Ce.x < 9 && Ce.x > -20 && W == "textwall") {
-          Ce = 0,
           window.open("https://discord.gg/23eESSV9xR"),
             Je()
           Cn("textwall", "main")
