@@ -375,8 +375,8 @@ function convertToEmote(msg) {
         "#13DE2B",
         "#69B9FF",
         "#2777F2",
-        // alternative dark blue "#075BC2"
-        "#00082C",
+        "#075BC2",
+        // alternative dark blue  "#00082C",
         "#B324E6",
         "#9410C7",
         "#C71100",
@@ -1244,21 +1244,21 @@ function convertToEmote(msg) {
                           Math["floor"](w - 0.5 * y),
                           Math["round"](M + 17.5 * y),
                           Math["ceil"](11 * y),
-                          Math["ceil"](y)
+                          Math["ceil"](y + ((8 & T)/3))
                         ),
                         16 & T &&
                         e["fillRect"](
                           Math["floor"](w - 0.5 * y),
-                          Math["round"](M + 0.5 * y,
+                          Math["round"](M + 0.5 * y),
                           Math["ceil"](11 * y),
-                          Math["ceil"](y + ((8 & T)))
+                          Math["ceil"](y + ((8 & T)/3))
                         ),
                         1 & T &&
                           e.fillRect(
                             Math["floor"](w - 0.5 * y),
                             Math["floor"](M + 9 * y),
                             Math.ceil(11 * y),
-                            Math["ceil"](y)
+                            Math["ceil"](y + ((8 & T)/3))
                           );
                     }
                   }
@@ -1416,7 +1416,7 @@ function convertToEmote(msg) {
           Zn(0,0)
         }
         if (Ce.y == -52 && Ce.x < 25 && Ce.x > -9 && W == "textwall") {
-          window.open("https://discord.gg/23eESSV9xR"),
+          window.open("https://richardtextwall.glitch.me"),
             Je()
         }
         if (W == "textwall" && Ce.x == -99) {
@@ -2664,9 +2664,7 @@ function convertToEmote(msg) {
       } else {
         document["getElementById"]("connecting2")["innerText"] =
           "Click to reconnect\nHaving issues? Ask in the Discord server!\n"; //connecting2 text
-        document["getElementById"]("connecting1").i
-        
-        erText = "Disconnected."; //connecting1 text
+        document["getElementById"]("connecting1").innerText = "Disconnected."; //connecting1 text
       }
       var a = document.createElement("a");
       a.href = "https://discord.gg/23eESSV9xR";
