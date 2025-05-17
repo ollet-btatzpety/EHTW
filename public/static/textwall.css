@@ -67,7 +67,7 @@ h3 {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(32, 29, 35, 0.8);
+  background-color: rgba(30, 30, 30, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,7 +76,7 @@ h3 {
   transition: opacity 0.5s;
 }
 #info {
-  background-color: rgba(32, 29, 35, 0.8);
+  background-color: rgba(30, 30, 30, 0.8);
   margin: auto;
   width: 45%;
   color: #ffffff;
@@ -115,7 +115,7 @@ h3 {
   filter: opacity(1);
 }
 #usermenu {
-  background-color: rgba(32, 29, 35, 0.8);
+  background-color: rgba(30, 30, 30, 0.8);
   color: #ffffff;
   position: absolute;
   padding: 5px;
@@ -147,7 +147,7 @@ h3 {
 .member {
   padding: 5px;
   margin: 3px;
-  background-color: rgba(240, 222, 250, 0.35);
+  background-color: rgba(255,255,255, 0.35);
   border-radius: 5px;
   font-size: 12px;
   cursor: pointer;
@@ -291,7 +291,7 @@ td {
 }
 .infobtn:active {
   transform: scale(0.9);
-  background-color: rgba(32, 29, 35, 0.3);
+  background-color: rgba(30, 30, 30, 0.8);
 }
 .container {
   display: flex;
@@ -305,7 +305,7 @@ td {
 }
 #toast {
   position: absolute;
-  background-color: rgba(32, 29, 35, 0.8);
+  background-color: rgba(30, 30, 30, 0.8);
   color: #ffffff;
   text-align: center;
   justify-content: center;
@@ -332,7 +332,7 @@ td {
   z-index: 2;
   text-align: center;
   transition: all 0.5s;
-  background-color: rgba(32, 29, 35, 0.8);
+  background-color: rgba(30, 30, 30, 0.8);
   color: #ffffff;
   margin: 15px;
   padding: 5px 15px 15px;
@@ -439,7 +439,7 @@ td {
 }
 .chatcontainer {
   width: 350px;
-  background-color: rgba(30,30,30, 0.8);
+  background-color: rgba(30, 30, 30, 0.8);
   border-radius: 0 0 0 5px;
   padding: 10px;
   display: flex;
@@ -479,7 +479,7 @@ td {
   margin: 5px 0 0 5px;
 }
 #chatbutton {
-  background-color: rgba(32, 29, 35, 0.8);
+  background-color: rgba(30, 30, 30, 0.8);
   border-radius: 0 0 0 5px;
   padding: 10px;
   margin-bottom: 24px;
