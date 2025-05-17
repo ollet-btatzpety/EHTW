@@ -260,6 +260,7 @@ function convertToEmote(msg) {
         "MS Gothic Neue": 18,
         "MS Mincho": 18,
         "Nanum Gothic Coding": 19,
+        "NK57 Mono": 19,
         "Noto Sans Mono": 16,
         "Overpass Mono": 16,
         "Oxygen Mono": 17,
