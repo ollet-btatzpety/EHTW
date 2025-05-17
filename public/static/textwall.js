@@ -3630,7 +3630,7 @@ function convertToEmote(msg) {
               var u = t;
               if (n == r["length"] || !Ie)
                 return nr(), (er = !1), mr(c), void le(l);
-              if ("\n" == r[n]) return cr(), setTimeout(e, 20 / 1.5, n + 1, o);
+              if ("\n" == r[n]) return cr(), setTimeout(e, 0, n + 1, o);
               var s,
                 d,
                 f = r[n];
@@ -3646,11 +3646,11 @@ function convertToEmote(msg) {
               switch (((zn = 0), Vn(f, 1))) {
                 case 0:
                 case 1:
-                  return setTimeout(e, 1, n + 1, o);
+                  return setTimeout(e, 0, n + 1, o);
                 default:
                   return setTimeout(
                     e,
-                    1,
+                    0,
                     n + 1,
                     o + 1
                   );
