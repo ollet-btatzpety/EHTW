@@ -268,6 +268,7 @@ function convertToEmote(msg) {
         "Red Hat Mono": 16,
         "Roboto Mono": 17,
         "Segoe Mono Boot": 16,
+        "SF Mono": 16,
         "Share Tech Mono": 17,
         "Sometype Mono": 17,
         "Source Code Pro": 17,

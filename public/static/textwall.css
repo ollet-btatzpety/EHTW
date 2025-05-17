@@ -842,6 +842,27 @@ td {
   font-weight: 400;
   src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/msmincho.ttc?v=1747444649172)
 }
+/* iosevka slab */
+@font-face {
+  font-family: sf mono;
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/SFMonoRegular.otf?v=1747445899735)
+}
+@font-face {
+  font-family: sf mono;
+  font-style: italic;
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/SFMonoRegularItalic.otf?v=1747445907483)
+}
+@font-face {
+  font-family: sf mono;
+  font-weight: 700;
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/SFMonoBold.otf?v=1747445883702)
+}
+@font-face {
+  font-family: sf mono;
+  font-weight: 700;
+  font-style: italic;
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/SFMonoBoldItalic.otf?v=1747445891246)
+}
 /* m plus 1 code vietnamese */
 @font-face {
   font-family: 'M PLUS1 Code';
