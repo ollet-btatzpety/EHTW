@@ -3642,11 +3642,11 @@ function convertToEmote(msg) {
               switch (((zn = 0), Vn(f, 1))) {
                 case 0:
                 case 1:
-                  return setTimeout(e, 10 / 1.5, n + 1, o);
+                  return setTimeout(e, 1, n + 1, o);
                 default:
                   return setTimeout(
                     e,
-                    (36 * Math["pow"](Math.E, _n * o)) / 1.5,
+                    1,
                     n + 1,
                     o + 1
                   );
