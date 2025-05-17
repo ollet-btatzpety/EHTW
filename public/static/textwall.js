@@ -260,7 +260,7 @@ function convertToEmote(msg) {
         "MS Gothic Neue": 18,
         "MS Mincho": 18,
         "Nanum Gothic Coding": 19,
-        "NK57 Mono": 19,
+        "NK57 Mono": 13,
         "Noto Sans Mono": 16,
         "Overpass Mono": 16,
         "Oxygen Mono": 17,
@@ -1247,7 +1247,7 @@ function convertToEmote(msg) {
                         ),
                         16 & T &&
                         e["fillRect"](
-                          Math["floor"](w - 0.5 * y),
+                          Math["floor"](w - 0.5 * y * (8 & t + 1)),
                           Math["round"](M + 0.5 * y),
                           Math["ceil"](11 * y),
                           Math["ceil"](y)
