@@ -866,8 +866,7 @@ td {
 /* sf mono */
 @font-face {
   font-family: sf mono;
-  font-style: italic;
-  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/SFMonoRegularItalic.otf?v=1747445907483)
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/SFMonoRegular.otf?v=1747445899735)
 }
 @font-face {
   font-family: sf mono;
