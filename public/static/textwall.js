@@ -1776,7 +1776,11 @@ function convertToEmote(msg) {
               (Ce.x += 1), nr(), ie(!1), e["preventDefault"]();
               break;
             case 9:
-              (Ce.x += 3), nr(), ie(!1), e.preventDefault();
+              if (e.shiftKey) {
+              (Ce.x -= 5), nr(), ie(!1), e.preventDefault();
+              } else {
+              (Ce.x += 5), nr(), ie(!1), e.preventDefault();
+              }
               break;
             case 36:
               (Ce.x = Ce["start"]), nr(), ie(!1), e["preventDefault"]();
