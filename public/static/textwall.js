@@ -249,6 +249,7 @@ function convertToEmote(msg) {
         "Iosevka Slab": 18,
         "Jetbrains Mono": 17,
         "Kode Mono": 17,
+        "League Mono": 14,
         "Lekton": 19,
         "Libertinus Mono": 16,
         "Lucida Sans Typewriter": 16,
