@@ -1244,21 +1244,21 @@ function convertToEmote(msg) {
                           Math["floor"](w - 0.5 * y),
                           Math["round"](M + 17.5 * y),
                           Math["ceil"](11 * y),
-                          Math["ceil"](y + ((8 & T)/3))
+                          Math["ceil"](y + ((8 & T)/4))
                         ),
                         16 & T &&
                         e["fillRect"](
                           Math["floor"](w - 0.5 * y),
                           Math["round"](M + 0.5 * y),
                           Math["ceil"](11 * y),
-                          Math["ceil"](y + ((8 & T)/3))
+                          Math["ceil"](y + ((8 & T)/4))
                         ),
                         1 & T &&
                           e.fillRect(
                             Math["floor"](w - 0.5 * y),
                             Math["floor"](M + 9 * y),
                             Math.ceil(11 * y),
-                            Math["ceil"](y + ((8 & T)/3))
+                            Math["ceil"](y + ((8 & T)/4))
                           );
                     }
                   }
