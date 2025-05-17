@@ -284,7 +284,7 @@ function convertToEmote(msg) {
         "Yu Mono Gothic": 18,
         Custom: 20,                                                 
         };
-    var G = "Fairfax HD",
+    var G = "Fairfax Special",
       Q = Math.floor($[G] * v) + "px " + G + ", monospace, Fairfax Special";
     const _ = new Map();
       _["set"]("Fixed", void 0),
@@ -727,7 +727,7 @@ function convertToEmote(msg) {
     }
     !(function () {
       var e = n;
-      (E["font"] = "10px Special"),
+      (E["font"] = "10px Fairfax Special"),
         E["fillText"]("abc", 0, 10),
         (E["font"] = Q),
         E["fillText"]("abc", 0, 10);
