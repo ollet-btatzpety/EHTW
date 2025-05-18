@@ -1416,8 +1416,8 @@ function convertToEmote(msg) {
           Cn("textwall", "main")
           Zn(0,0)
         }
-        if (Ce.y == 21 && Ce.x < 25 && Ce.x > -9 && W == "textwall") {
-          window.open("https://richardtextwall.glitch.me"),
+        if (Ce.y == 21 && Ce.x < 21 && Ce.x > -9 && W == "textwall") {
+          window.open("https://richardwall.glitch.me"),
             Je()
         }
         if (W == "textwall" && Ce.x == -99) {
