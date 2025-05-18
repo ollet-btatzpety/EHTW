@@ -265,7 +265,7 @@ function convertToEmote(msg) {
         "Noto Sans Mono": 16,
         "Overpass Mono": 16,
         "Oxygen Mono": 17,
-        "Pixel M10": 16,
+        "Pixel Plus10": 16,
         "PT Mono": 16,
         "Reddit Mono": 16,
         "Red Hat Mono": 16,
