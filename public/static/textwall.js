@@ -1193,7 +1193,7 @@ function convertToEmote(msg) {
                           !(u >= 9548 && u <= 9551)) ||
                           (u >= 117760 && u <= 118527) ||
                           (u >= 129792 && u <= 130047) ||
-                         (u >= 58368 && u <= 58879) ||
+                         (u >= 58368 && u <= 58895) ||
                           qr(B))
                       )
                         (e["font"] = Math["round"](20 * y) + "px Fairfax Special"),
