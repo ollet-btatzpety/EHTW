@@ -782,7 +782,11 @@ td {
 }
 /* fairfax 2 */
 @font-face {
-  font-family: "fairfax special";
+  font-family: "fairfax hd";
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/FairfaxHD.ttf?v=1747528883923)
+}
+@font-face {
+  font-family: "fairfax2 special";
   src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/FairfaxSpecial.ttf?v=1747490558428)
 }
 /* iosevka */
@@ -839,9 +843,13 @@ td {
 }
 @font-face {
   font-family: ms mincho;
-  font-weight: 400;
   src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/msmincho.ttc?v=1747444649172)
 }
+@font-face {
+  font-family: pixel m10;
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/PixelMplus10-Regular.ttf?v=1747529137391)
+}
+
 /* nk57 */
 @font-face {
   font-family: nk57 mono;

@@ -237,7 +237,8 @@ function convertToEmote(msg) {
         "DM Mono": 12,
         "Envy Code R": 19,
         "Everson Mono": 16,
-        "Fairfax Special": 20,
+        "Fairfax HD": 19,
+        "Fairfax2 Special": 20,
         "Fantasque Sans Mono": 18,
         "Fira Code": 18,
         "Fira Mono": 18,
@@ -264,6 +265,7 @@ function convertToEmote(msg) {
         "Noto Sans Mono": 16,
         "Overpass Mono": 16,
         "Oxygen Mono": 17,
+        "Pixel M10": 16,
         "PT Mono": 16,
         "Reddit Mono": 16,
         "Red Hat Mono": 16,
@@ -1196,7 +1198,7 @@ function convertToEmote(msg) {
                          (u >= 58368 && u <= 58895) ||
                           qr(B))
                       )
-                        (e["font"] = Math["round"](20 * y) + "px Fairfax Special"),
+                        (e["font"] = Math["round"](20 * y) + "px Fairfax2 Special"),
                           e["fillText"](
                             S,
                             Math["round"](w),
