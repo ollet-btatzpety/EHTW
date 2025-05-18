@@ -237,7 +237,7 @@ function convertToEmote(msg) {
         "DM Mono": 12,
         "Envy Code R": 19,
         "Everson Mono": 16,
-        "Fairfax HD": 19,
+        "Fairfax HD": 20,
         "Fairfax2 Special": 20,
         "Fantasque Sans Mono": 18,
         "Fira Code": 18,
