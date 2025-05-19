@@ -3327,7 +3327,7 @@ function convertToEmote(msg) {
     var zn = 0,
       qn = performance["now"](),
       Yn = 0, Jn = normalColor, rainbowMode,
-        rainbowModeMap = new Map(), rainbowArray = ["None", "Light", "Normal", "Dark", "Classic"];
+        rainbowModeMap = new Map(), rainbowArray = ["Light", "Normal", "Dark", "Classic"];
     /*
         lightColor = [4,29,24,8,25,10,26,27,3,2],
         normalColor = [15,5,7,9,18,11,20,13,21,1,0],
@@ -3436,7 +3436,7 @@ function convertToEmote(msg) {
             ir("Please log in before typing.", 3e3),
           0
         );
-      /* tt.rainbow["checked"] && */ rainbowMode != "None"
+      tt.rainbow["checked"] &&
         !r &&
         (mr(Jn[Yn]), ++Yn == Jn.length && (Yn = 0));
       var d,
