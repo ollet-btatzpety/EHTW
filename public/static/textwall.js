@@ -373,7 +373,7 @@ function convertToEmote(msg) {
         "#F89915",
         "#A85F11",
         "#FFE829",
-        "#8FF46B",
+        "#8FF44B",
         "#13DE2B",
         "#69B9FF",
         "#2555F2",
@@ -632,9 +632,10 @@ function convertToEmote(msg) {
           (o = '"' + (o || "monospace") + '"'))
         : D.classList["add"]("hidden"),
         (Q = Math["floor"](i * v) + "px " + o + 
-         (o == "Ubuntu Sans Mono" ? ", Ubuntu Mono" :
-          (o == "Lucida Sans Typewriter" ? ", Lucida Console" : ""
-           )) +
+          (o == "Ubuntu Sans Mono" ? ", Ubuntu Mono" :
+            (o == "Jetbrains Mono" ? ", Iosevka" :
+              (o == "Lucida Sans Typewriter" ? ", Lucida Console" : ""
+           ))) +
          ", monospace, Iosevka, Fairfax Special"),
         localStorage["setItem"]("font", G),
         (document.getElementById("fontselect")["value"] = G),
@@ -3326,11 +3327,16 @@ function convertToEmote(msg) {
     var zn = 0,
       qn = performance["now"](),
       Yn = 0, Jn = normalColor, rainbowMode,
-        rainbowModeMap = new Map(), rainbowArray = ["Light", "Normal", "Dark", "Monochromatic"];
-    rainbowModeMap.set("Light",lightColor),
-    rainbowModeMap.set("Normal",normalColor),
-    rainbowModeMap.set("Dark",darkColor),
-    rainbowModeMap.set("Monochromatic",monochromeColor);
+        rainbowModeMap = new Map(), rainbowArray = ["Light", "Normal", "Dark", "Classic"];
+    /*
+        lightColor = [4,29,24,8,25,10,26,27,3,2],
+        normalColor = [15,5,7,9,18,11,20,13,21,1,0],
+        darkColor = [23,6,22,16,17,12,19,14,28,30];
+    */
+    rainbowModeMap.set("Light",[4,29,24,8,25,10,26,27,3]),
+    rainbowModeMap.set("Normal",[15,5,7,9,18,11,20,13,21]),
+    rainbowModeMap.set("Dark",[23,6,22,16,17,12,19,14,28]),
+    rainbowModeMap.set("Classic",[4,5,7,8,9,18,11,20,13,21,15]);
     var rainbowOption;
     for (var rainbowModeLength = 0; rainbowModeLength < rainbowArray["length"]; rainbowModeLength++)
       (rainbowOption = document["createElement"]("option")),
@@ -3430,7 +3436,7 @@ function convertToEmote(msg) {
             ir("Please log in before typing.", 3e3),
           0
         );
-      tt.rainbow["checked"] &&
+      
         !r &&
         (mr(Jn[Yn]), ++Yn == Jn.length && (Yn = 0));
       var d,
