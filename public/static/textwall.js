@@ -287,7 +287,7 @@ function convertToEmote(msg) {
         Custom: 20,                                                 
         };
     var G = "Fairfax Special",
-      Q = Math.floor($[G] * v) + "px " + G + ", monospace, Fairfax Special";
+      Q = Math.floor($[G] * v) + "px " + G + ", monospace, Iosevka, Fairfax Special";
     const _ = new Map();
       _["set"]("Fixed", void 0),
       _["set"]("Terminus", void 0),
@@ -377,15 +377,15 @@ function convertToEmote(msg) {
         "#13DE2B",
         "#69B9FF",
         "#2555F2",
-        "#0343C2",
+        "#0343A7",
         "#B324E6",
         "#9410C7",
         "#C71100",
         "#23AE15",
         "#0789AB",
         "#1fc0d9",
-        "#242F98",
-        "#493AC1",
+        "#3916BA",
+        "#5F1DFC",
         "#FF2AAD",
         "#BA8E14",
         "#670500",
@@ -486,9 +486,15 @@ function convertToEmote(msg) {
       Xe = performance["now"](),
       ze = { scale: 1, offset: { x: 0, y: 0 } },
       qe = {
-        start: { x: null, y: null },
-        offset: { x: 0, y: 0 },
-        coords: { x: 0, y: 0 },
+        start: {
+          x: null, y: null
+        },
+        offset: {
+          x: 0, y: 0
+        },
+        coords: {
+          x: 0, y: 0
+        },
       },
       Ye = !1,
       Je = !1,
@@ -629,7 +635,7 @@ function convertToEmote(msg) {
          (o == "Ubuntu Sans Mono" ? ", Ubuntu Mono" :
           (o == "Lucida Sans Typewriter" ? ", Lucida Console" : ""
            )) +
-         ", Source Code Pro, Courier New, monospace, Fairfax Special"),
+         ", monospace, Iosevka, Fairfax Special"),
         localStorage["setItem"]("font", G),
         (document.getElementById("fontselect")["value"] = G),
         (ge = !0);
