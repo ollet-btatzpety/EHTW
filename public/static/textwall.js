@@ -267,8 +267,8 @@ function convertToEmote(msg) {
         "Oxygen Mono": 17,
         "Pixel Plus10": 16,
         "PT Mono": 16,
-        "Reddit Mono": 16,
         "Red Hat Mono": 16,
+        "Reddit Mono": 16,
         "Roboto Mono": 17,
         "Segoe Mono Boot": 16,
         "SF Mono": 16,
@@ -286,8 +286,8 @@ function convertToEmote(msg) {
         "Yu Mono Gothic": 18,
         Custom: 20,                                                 
         };
-    var G = "Fairfax Special",
-      Q = Math.floor($[G] * v) + "px " + G + ", monospace, Iosevka, Fairfax Special";
+    var G = "Fairfax2 Special",
+      Q = Math.floor($[G] * v) + "px " + G + ", monospace, Iosevka, Fairfax2 Special";
     const _ = new Map();
       _["set"]("Fixed", void 0),
       _["set"]("Terminus", void 0),
@@ -636,7 +636,7 @@ function convertToEmote(msg) {
             (o == "Jetbrains Mono" ? ", Iosevka" :
               (o == "Lucida Sans Typewriter" ? ", Lucida Console" : ""
            ))) +
-         ", monospace, Iosevka, Fairfax Special"),
+         ", monospace, Iosevka, Fairfax2 Special"),
         localStorage["setItem"]("font", G),
         (document.getElementById("fontselect")["value"] = G),
         (ge = !0);
@@ -736,7 +736,7 @@ function convertToEmote(msg) {
     }
     !(function () {
       var e = n;
-      (E["font"] = "10px Fairfax Special"),
+      (E["font"] = "10px Fairfax2 Special"),
         E["fillText"]("abc", 0, 10),
         (E["font"] = Q),
         E["fillText"]("abc", 0, 10);
@@ -1196,9 +1196,7 @@ function convertToEmote(msg) {
                           h <= 58367 &&
                           ((B = Rt(B)), (S = String["fromCodePoint"](B))),
                         ((u = B) >= 9472 &&
-                          u <= 9631 &&
-                          !(u >= 9476 && u <= 9483) &&
-                          !(u >= 9548 && u <= 9551)) ||
+                          u <= 9631)||
                           (u >= 117760 && u <= 118527) ||
                           (u >= 129792 && u <= 130047) ||
                          (u >= 58368 && u <= 58895) ||
@@ -1209,7 +1207,7 @@ function convertToEmote(msg) {
                             S,
                             Math["round"](w),
                             Math["floor"](M + 15 * y)
-                          );
+                          ); // fucking unexpected token???
                       if (
                         (4 & T && ((L = !0), Ht(e)),
                         (h = B) >= 58112 &&
@@ -3331,11 +3329,6 @@ function convertToEmote(msg) {
       qn = performance["now"](),
       Yn = 0, Jn = normalColor, rainbowMode,
         rainbowModeMap = new Map(), rainbowArray = ["Light", "Normal", "Dark", "Classic"];
-    /*
-        lightColor = [4,29,24,8,25,10,26,27,3,2],
-        normalColor = [15,5,7,9,18,11,20,13,21,1,0],
-        darkColor = [23,6,22,16,17,12,19,14,28,30];
-    */
     rainbowModeMap.set("Light",[4,29,24,8,25,10,26,27]),
     rainbowModeMap.set("Normal",[15,5,7,9,18,11,20,13]),
     rainbowModeMap.set("Dark",[23,6,22,16,17,12,19,14]),
