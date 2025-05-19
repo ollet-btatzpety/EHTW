@@ -1410,6 +1410,7 @@ function convertToEmote(msg) {
     function nn(e) {
       var t = n;
       if (e.isTrusted) {
+        
         if (Ce.y == -1 && Ce.x < 9 && Ce.x > -20 && W == "textwall") {
           window.open("https://discord.gg/23eESSV9xR"),
             Je()
@@ -1442,6 +1443,8 @@ function convertToEmote(msg) {
             case 3:
               tw = "update"
               break;
+            default:
+              Zn(-98,Ce.y)
           }
           var tpwall = Lr(tw)
           Zn(tpwall.x, tpwall.y)
