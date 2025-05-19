@@ -3327,15 +3327,15 @@ function convertToEmote(msg) {
     var zn = 0,
       qn = performance["now"](),
       Yn = 0, Jn = normalColor, rainbowMode,
-        rainbowModeMap = new Map(), rainbowArray = ["Light", "Normal", "Dark", "Classic"];
+        rainbowModeMap = new Map(), rainbowArray = ["None", "Light", "Normal", "Dark", "Classic"];
     /*
         lightColor = [4,29,24,8,25,10,26,27,3,2],
         normalColor = [15,5,7,9,18,11,20,13,21,1,0],
         darkColor = [23,6,22,16,17,12,19,14,28,30];
     */
-    rainbowModeMap.set("Light",[4,29,24,8,25,10,26,27,3]),
-    rainbowModeMap.set("Normal",[15,5,7,9,18,11,20,13,21]),
-    rainbowModeMap.set("Dark",[23,6,22,16,17,12,19,14,28]),
+    rainbowModeMap.set("Light",[4,29,24,8,25,10,26,27]),
+    rainbowModeMap.set("Normal",[15,5,7,9,18,11,20,13]),
+    rainbowModeMap.set("Dark",[23,6,22,16,17,12,19,14]),
     rainbowModeMap.set("Classic",[4,5,7,8,9,18,11,20,13,21,15]);
     var rainbowOption;
     for (var rainbowModeLength = 0; rainbowModeLength < rainbowArray["length"]; rainbowModeLength++)
@@ -3436,7 +3436,7 @@ function convertToEmote(msg) {
             ir("Please log in before typing.", 3e3),
           0
         );
-      
+      /* tt.rainbow["checked"] && */ rainbowMode != "None"
         !r &&
         (mr(Jn[Yn]), ++Yn == Jn.length && (Yn = 0));
       var d,
