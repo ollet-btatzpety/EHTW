@@ -2747,9 +2747,11 @@ function convertToEmote(msg) {
         /((http|https|ftp):\/\/[\w?=&.\/-;#~%-]+(?![\w\s?&.\/;#~%"=-]*>))/g,
         '<a href="/$1" target="_blank">$1</a>'
       );
+      if (s.innerText.startsWith("> ")) {
+        s.innerHTML = `<div style="color: #480">${s.innerText}</div>`;
+      }
       var u =
         Math["abs"](i["scrollHeight"] - i["scrollTop"] - i["clientHeight"]) < 5;
-      twemoji.parse(c, { base: "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/" }); // twemoji isnt defined
       c.innerHTML = convertToEmote(c.innerHTML);
       c.childNodes[0].onclick = l.onclick;
       i.appendChild(c),
