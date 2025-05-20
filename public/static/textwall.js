@@ -1436,13 +1436,13 @@ function convertToEmote(msg) {
               tw = "shortcuts"
               break;
             case 2:
-              tw = "rare_walls"
+              tw = "random"
               break;
             case 3:
               tw = "update"
               break;
             default:
-              Zn(-98,Ce.y)
+              Zn(Math.round(Math.random())*2-100,Ce.y)
           }
           var tpwall = Lr(tw)
           Zn(tpwall.x, tpwall.y)
