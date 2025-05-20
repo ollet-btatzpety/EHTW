@@ -2748,7 +2748,7 @@ function convertToEmote(msg) {
         '<a href="/$1" target="_blank">$1</a>'
       );
       if (s.innerText.startsWith(">")) {
-        s.innerHTML = `<msg style="color: #480">${s.innerText}</msg>`;
+        s.innerHTML = `<msg style="color: #62c; font-style: italic;">${s.innerText}</msg>`;
       }
       var u =
         Math["abs"](i["scrollHeight"] - i["scrollTop"] - i["clientHeight"]) < 5;
