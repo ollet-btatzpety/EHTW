@@ -287,7 +287,7 @@ function convertToEmote(msg) {
         Custom: 20,                                                 
         };
     var G = "Fairfax2 Special",
-      Q = Math.floor($[G] * v) + "px " + G + ", monospace, Iosevka, Fairfax2 Special";
+      Q = Math.floor($[G] * v) + "px " + G + ", monospace, Iosevka, Fairfax2 Special, Noto Color Emoji";
     const _ = new Map();
       _["set"]("Fixed", void 0),
       _["set"]("Terminus", void 0),
