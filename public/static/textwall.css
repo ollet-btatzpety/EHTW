@@ -780,12 +780,12 @@ td {
 }
 /* fairfax 2 */
 @font-face {
-  font-family: fairfax hd;
+  font-family: fairfax2;
   src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/FairfaxHD.ttf?v=1747528883923)
 }
 @font-face {
   font-family: fairfax2 special;
-  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/Fairfax2Special.ttf?v=1747654073138)
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/Fairfax2Special.ttf?v=1748005627478)
 }
 /* iosevka */
 @font-face {
