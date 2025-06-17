@@ -248,19 +248,20 @@ function convertToEmote(msg) {
         "IBM Plex Mono": 16,
         "Inconsolata": 18,
         "Iosevka": 18,
-        "Iosevka Extended": 17,
+        "Iosevka Extended": 16,
         "Iosevka Gothic": 18,
-        "Iosevka Gothic Extended": 17,
+        "Iosevka Gothic Extended": 16,
         "Iosevka Typewriter": 18,
-        "Iosevka Typewriter Extended": 17,
+        "Iosevka Typewriter Extended": 16,
         "Jetbrains Mono": 17,
         "Kode Mono": 17,
-        "League Mono": 14,
+        "League Mono": 16,
         "Lekton": 19,
         "Libertinus Mono": 16,
         "Lucida Sans Typewriter": 16,
         "Martian Mono": 15,
         "Monofur": 18,
+        "Monolity Mono": 16,
         "M PLUS1 Code": 16,
         "MS Gothic Neue": 18,
         "MS Mincho": 18,
@@ -938,8 +939,12 @@ function convertToEmote(msg) {
     function CyrL(e) {
       return "БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬ"[Math["floor"](22 * e)]["codePointAt"](); 
     }
+    function SLCA(e) {
+      return 117830 + Math.floor(2 * e);
+    }
     function Rt(e) {
-      const t = Math.random();
+      const t = Math.random(),
+      custrand = (t%0.5)*2
       switch (e - 58112) {
         case 0:
           return LNums(t);
@@ -948,7 +953,7 @@ function convertToEmote(msg) {
         case 2:
           return UppNums(t);
         case 3:
-          return t < 0.5 ? Ft(t) + 32 : Ft(t);
+          return t < 0.5 ? Ft(custrand) + 32 : Ft(custrand);
         case 4:
           return Ft(t) + 32;
         case 5:
@@ -956,13 +961,13 @@ function convertToEmote(msg) {
         case 6:
           return Pt(t);
         case 7:
-          return t < 0.5 ? Lt(t) + 32 : Lt(t);
+          return t < 0.5 ? Lt(custrand) + 32 : Lt(custrand);
         case 8:
           return Lt(t) + 32;
         case 9:
           return Lt(t);
         case 10:
-          return t < 0.5 ? Ot(t) + 32 : Ot(t);
+          return t < 0.5 ? Ot(custrand) + 32 : Ot(custrand);
         case 11:
           return Ot(t) + 32;
         case 12:
@@ -1016,7 +1021,7 @@ function convertToEmote(msg) {
         case 36:
           return GreekC(t);
         case 37:
-          return t < 0.5 ? GreekH(t) + 32 : GreekH(t);
+          return t < 0.5 ? GreekH(custrand) + 32 : GreekH(custrand);
         case 38:
           return GreekH(t) + 32;
         case 39:
@@ -1034,7 +1039,7 @@ function convertToEmote(msg) {
         case 45:
           return CyrB(t);
         case 46:
-          return t < 0.5 ? CyrD(t) + 32 : CyrD(t);
+          return t < 0.5 ? CyrD(custrand) + 32 : CyrD(custrand);
         case 47:
           return CyrD(t) + 32;
         case 48:
@@ -1046,37 +1051,37 @@ function convertToEmote(msg) {
         case 51:
           return CyrF(t);
         case 52:
-          return t < 0.5 ? CyrH(t) + 48 : CyrH(t);
+          return t < 0.5 ? CyrH(custrand) + 48 : CyrH(custrand);
         case 53:
           return CyrH(t) + 48;
         case 54:
           return CyrH(t);
         case 55:
-          return t < 0.5 ? CyrI(t) + 32 : CyrI(t);
+          return t < 0.5 ? CyrI(custrand) + 32 : CyrI(custrand);
         case 56:
           return CyrI(t) + 32;
         case 57:
           return CyrI(t);
         case 58:
-          return t < 0.5 ? CyrJ(t) + 32 : CyrJ(t);
+          return t < 0.5 ? CyrJ(custrand) + 32 : CyrJ(custrand);
         case 59:
           return CyrJ(t) + 32;
         case 60:
           return CyrJ(t);
         case 61:
-          return t < 0.5 ? CyrK(t) + 32 : CyrK(t);
+          return t < 0.5 ? CyrK(custrand) + 32 : CyrK(custrand);
         case 62:
           return CyrK(t) + 32;
         case 63:
           return CyrK(t);
         case 64:
-          return t < 0.5 ? CyrL(t) + 32 : CyrL(t);
+          return t < 0.5 ? CyrL(custrand) + 32 : CyrL(custrand);
         case 65:
           return CyrL(t) + 32;
         case 66:
           return CyrL(t);
         case 68:
-          return ShapeA(t);
+          return SLCA(t);
         case 69:
           return ShapeB(t);
         case 70:
@@ -1196,17 +1201,15 @@ function convertToEmote(msg) {
                       var L = !1;
                       if (
                         (4 & T && ((L = !0), Ht(e)),
-                        (h = B) >= 58112 &&
-                          h <= 58367 &&
+                        (h = B) >= 58112 && h <= 58367 &&
                           ((B = Rt(B)), (S = String["fromCodePoint"](B))),
-                        ((u = B) >= 9472 &&
-                          u <= 9631)||
+                        ((u = B) >= 9472 && u <= 9631)||
                           (u >= 117760 && u <= 118527) ||
                           (u >= 129792 && u <= 130047) ||
                          (u >= 58368 && u <= 58895) ||
                           qr(B))
                       )
-                        (e["font"] = Math["round"](20 * y) + "px Fairfax2 Special"),
+                        (e["font"] = Math["round"](20 * y) + "px Fairfax2"),
                           e["fillText"](
                             S,
                             Math["round"](w),
@@ -1214,17 +1217,30 @@ function convertToEmote(msg) {
                           ); // fucking unexpected token???
                       if (
                         (4 & T && ((L = !0), Ht(e)),
-                        (h = B) >= 58112 &&
-                          h <= 58367 &&
+                        (h = B) >= 58112 && h <= 58367 &&
                           ((B = Rt(B)), (S = String["fromCodePoint"](B))),
-                        ((u = B) >= 12320 &&
-                          u <= 40959 &&
-                          !(u >= 19904 && u <= 19967) &&
-                          !(u >= 9548 && u <= 9551)) ||
+                         ((u = B) >= 9312 && u <= 9471) ||
+                         (u >= 19904 && u <= 19967) ||
+                         (u >= 12881 && u <= 12895) ||
+                         (u >= 12977 && u <= 12991))
+                      )
+                        (e["font"] = Math["round"](10 * y) + "px Iosevka"),
+                          e["fillText"](
+                            S,
+                            Math["round"](w),
+                            Math["floor"](M + 15 * y)
+                          ); // fucking unexpected token???
+                      if (
+                        (4 & T && ((L = !0), Ht(e)),
+                        (h = B) >= 58112 && h <= 58367 &&
+                          ((B = Rt(B)), (S = String["fromCodePoint"](B))),
+                         ((u = B) >= 12320 && u <= 40959 &&
+                          !((u >= 12881 && u <= 12895) ||
+                          (u >= 12977 && u <= 12991) ||
+                          (u >= 19904 && u <= 19967))) ||
                           (u >= 43360 && u <= 43391) ||
                           (u >= 44032 && u <= 55291) ||
                           (u >= 65072 && u <= 65103) ||
-                          (u >= 9312 && u <= 9471) ||
                           (u >= 10102 && u <= 10131) ||
                           (u >= 11904 && u <= 12287) ||
                           (u >= 127488 && u <= 127743) ||
@@ -2707,22 +2723,40 @@ function convertToEmote(msg) {
       }
       return e
     }
+    var chatMessages = [];
     function addChat(name, color, message, registered, id) {
-      var o = t,
+      chatMessages.push({
+        name: name,
+        color: color,
+        message: message,
+        registered: registered
+      })
+      var a = document["createElement"]("div"),
+        o = t,
         i = document.getElementById("chatbox"),
         c = document["createElement"]("p"),
         l = document.createElement("a"),
         s = document.createElement("msg");
-      (l["innerText"] = name),
-        (l.style["color"] = "#ffffff" == se[color] ? "#222222" : se[color]),
+    l.classList.value = "message-popup";
+    l.style = "font-weight:bold;";
+    s.classList.value = "message-popup";
+    if (chatMessages[chatMessages.length-1].name != (((chatMessages.length-2) == -1) ? "" : chatMessages[chatMessages.length-2].name)) {
+        l.innerText = "";
+        (l["innerText"] = ((registered || !containsNumber(name)) ? name : ("Anon " + name))),
+        (l.style["color"] = "#f2f5fc" == se[color] ? "#222222" : se[color]),
         registered &&
-          ((l["href"] = "/@" + name), l.onclick = wn), // teleportTo is not defined glitch just doesnt know it right 
-        (l.title = "Anon " + id);
-      ir(name + ": " + message)
+          ((l["href"] = "/~" + name), l.onclick = wn);
+    } else {
+        l.innerText = "";
+    }
       s.innerText = message;
       c["appendChild"](l),
-      c.appendChild(document.createTextNode(": ")),
+      c.appendChild(a),
       c.appendChild(s);
+      s.innerHTML = s.innerHTML.replace(
+        /((http|https|ftp):\/\/[\w?=&.\/-;#~%-]+(?![\w\s?&.\/;#~%"=-]*>))/g,
+        '<a href="/$1" target="_blank">$1</a>'
+      );
       s.innerHTML = s.innerHTML.replace(
         /(@[\w?=._-]+(?![\w\s?._-]*>))/g,
         '<a id="userwall" target="_blank">$1</a>'
@@ -2731,7 +2765,7 @@ function convertToEmote(msg) {
       s.innerHTML = correct(s.innerHTML,"rizz","charisma"); // charismaler 😭
       s.innerHTML = correct(s.innerHTML,"gyat","but");
       s.innerHTML = correct(s.innerHTML,"ohio","australia"); // if this is where you live, i am sorry
-      s.innerHTML = correct(s.innerHTML,"sigma","σ");
+      s.innerHTML = correct(s.innerHTML,"sigma","σ"); // s*gma, beta and alpha will be corrected due to them being gen alpha words
       s.innerHTML = correct(s.innerHTML,"beta","β");
       s.innerHTML = correct(s.innerHTML,"alpha","α");
       s.innerHTML = correct(s.innerHTML,"αbet","alphabet"); // okay fuck
@@ -3362,7 +3396,7 @@ function convertToEmote(msg) {
     };
     client.chat = {
       send: (msg) => {
-        msg = msg.toString().slice(0, 400);
+        msg = msg.toString().slice(0, 1024);
         var args = msg.split(" ");
         var cmd = args.shift();
         if (cmd.startsWith("/") && client.commands[cmd.slice(1)])
