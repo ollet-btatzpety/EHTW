@@ -642,6 +642,7 @@ function convertToEmote(msg) {
               (o == "Lucida Sans Typewriter" ? ", Lucida Console" : ""
            ))) +
          ", monospace, Iosevka, Fairfax2 Special"),
+        client.font = Q,
         localStorage["setItem"]("font", G),
         (document.getElementById("fontselect")["value"] = G),
         (ge = !0);
@@ -1209,7 +1210,7 @@ function convertToEmote(msg) {
                          (u >= 58368 && u <= 58895) ||
                           qr(B))
                       )
-                        (e["font"] = Math["round"](20 * y) + "px Fairfax2"),
+                        (e["font"] = Math["round"](20 * y) + "px Fairfax2 Special"),
                           e["fillText"](
                             S,
                             Math["round"](w),
@@ -2723,6 +2724,9 @@ function convertToEmote(msg) {
       }
       return e
     }
+    function containsNumber(text) {
+	return ((text.includes("0")) || (text.includes("1")) || (text.includes("2")) || (text.includes("3")) || (text.includes("4")) || (text.includes("5")) || (text.includes("6")) || (text.includes("7")) || (text.includes("8")) || (text.includes("9")))
+}
     var chatMessages = [];
     function addChat(name, color, message, registered, id) {
       chatMessages.push({
@@ -2742,29 +2746,30 @@ function convertToEmote(msg) {
     s.classList.value = "message-popup";
     if (chatMessages[chatMessages.length-1].name != (((chatMessages.length-2) == -1) ? "" : chatMessages[chatMessages.length-2].name)) {
         l.innerText = "";
-        (l["innerText"] = ((registered || !containsNumber(name)) ? name : ("Anon " + name))),
+        (l["innerText"] = ((registered || !containsNumber(name)) ? name : ("Guest " + name))),
         (l.style["color"] = "#f2f5fc" == se[color] ? "#222222" : se[color]),
         registered &&
           ((l["href"] = "/~" + name), l.onclick = wn);
     } else {
         l.innerText = "";
     }
-      s.innerText = message;
-      c["appendChild"](l),
-      c.appendChild(a),
-      c.appendChild(s);
+      if (message.includes("!html ")) {
+        s.innerHTML = message.replaceAll("!html ","");
+      } else {
+        s.innerText = message;
+      }
+      s.innerHTML = s.innerHTML.replaceAll("\\n","<div></div>")
       s.innerHTML = s.innerHTML.replace(
-        /((http|https|ftp):\/\/[\w?=&.\/-;#~%-]+(?![\w\s?&.\/;#~%"=-]*>))/g,
-        '<a href="/$1" target="_blank">$1</a>'
-      );
+          /((http|https|ftp):\/\/[\w?=&.\/-;#~%-]+(?![\w\s?&.\/;#~%"=-]*>))/g,
+          '<a href="/$1" target="_blank">$1</a>'
+        );
       s.innerHTML = s.innerHTML.replace(
-        /(@[\w?=._-]+(?![\w\s?._-]*>))/g,
-        '<a id="userwall" target="_blank">$1</a>'
-      );
-      // main brainrot words will be corrected
-      s.innerHTML = correct(s.innerHTML,"rizz","charisma"); // charismaler 😭
+          /(@[\w?=._-]+(?![\w\s?._-]*>))/g,
+          '<a id="userwall" target="_blank">$1</a>'
+        );
+        // main brainrot words will be corrected
+      s.innerHTML = correct(s.innerHTML,"rizz","charisma");
       s.innerHTML = correct(s.innerHTML,"gyat","but");
-      s.innerHTML = correct(s.innerHTML,"ohio","australia"); // if this is where you live, i am sorry
       s.innerHTML = correct(s.innerHTML,"sigma","σ"); // s*gma, beta and alpha will be corrected due to them being gen alpha words
       s.innerHTML = correct(s.innerHTML,"beta","β");
       s.innerHTML = correct(s.innerHTML,"alpha","α");
@@ -2773,7 +2778,9 @@ function convertToEmote(msg) {
       s.innerHTML = correct(s.innerHTML,"dandy's world","badass game");
       s.innerHTML = correct(s.innerHTML,"fanum tax","food theft auto");
       s.innerHTML = correct(s.innerHTML,"skibidi","cringe");
-      s.innerHTML = correct(s.innerHTML,"yapping","speaking");
+      s.innerHTML = correct(s.innerHTML,"font-family","font_family");
+      s.innerHTML = correct(s.innerHTML,"yapp","speak");
+      s.innerHTML = correct(s.innerHTML,"yap","speak");
       s.innerHTML = correct(s.innerHTML,"im cooke","im fucke");
       s.innerHTML = correct(s.innerHTML,"i'm cooke","i'm fucke");
       s.innerHTML = correct(s.innerHTML,"am i cooke","am i fucke");
@@ -2782,25 +2789,27 @@ function convertToEmote(msg) {
       s.innerHTML = correct(s.innerHTML,atob('bmlnZ2Vy'),"black person");
       s.innerHTML = correct(s.innerHTML,atob('eXVuYQ=='),"https://discord.gg/23eESSV9xR");
       s.innerHTML = s.innerHTML.replace(
-        /((http|https|ftp):\/\/[\w?=&.\/-;#~%-]+(?![\w\s?&.\/;#~%"=-]*>))/g,
-        '<a href="/$1" target="_blank">$1</a>'
-      );
-      if (s.innerText.startsWith(">")) {
-        s.innerHTML = `<msg style="color: #62c; font-style: italic;">${s.innerText}</msg>`;
-      }
+          /((http|https|ftp):\/\/[\w?=&.\/-;#~%-]+(?![\w\s?&.\/;#~%"=-]*>))/g,
+          '<a href="/$1" target="_blank">$1</a>'
+        );
+      s.innerHTML = s.innerHTML.replace(/\*\*\*(.+?)\*\*\*/g, '<span style="font-weight: bold; font-style: italic;">$1</span>');
+      s.innerHTML = s.innerHTML.replace(/\*\*(.+?)\*\*/g, '<span style="font-weight: bold;">$1</span>');
+      s.innerHTML = s.innerHTML.replace(/\\\*(.+)\\\*/s,'*$1*');
+      s.innerHTML = s.innerHTML.replace(/\*(.+?)\*/g, '<span style="font-style: italic;">$1</span>');
+      s.innerHTML = s.innerHTML.replace(/~(.+?)~/g, '<s>$1</s>');
+      s.innerHTML = s.innerHTML.replace(/\^{(.+?)}/g,"<sup>$1</sup>")
+      s.innerHTML = s.innerHTML.replace(/\_{(.+?)}/g,"<sub>$1</sub>")
+      c["appendChild"](l),
+      c.appendChild(a),
+      c.appendChild(s);
       var u =
         Math["abs"](i["scrollHeight"] - i["scrollTop"] - i["clientHeight"]) < 5;
-      c.innerHTML = convertToEmote(c.innerHTML);
-      c.childNodes[0].onclick = l.onclick;
       i.appendChild(c),
         u && gn(),
         hn["classList"]["contains"]("open") || yn["classList"]["add"]("show");
     }
-    function usersMessage(msg,user) {
-      addChat(user, 0, msg, false, 0);
-    }
     function clientMessage(msg) {
-      usersMessage(msg,"Client")
+      addChat("Clint", 0, msg, false, 0);
     }
     function Tn(e) {
       var t = n,
@@ -2968,9 +2977,10 @@ function convertToEmote(msg) {
             message: T[2],
             registered: T[3],
             id: T[4],
+            font: T[4],
           });
           if (!(T[0].startsWith("[") && tt["hideguestchat"]["checked"])) {
-          addChat(T[0], T[1], T[2], T[3], T[4]);
+          addChat(T[0], T[1], T[2], T[3], T[4], T[5]);
           }
           break;
         case "rc":

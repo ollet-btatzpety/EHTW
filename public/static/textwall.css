@@ -5,7 +5,7 @@ body {
   position: static;
 }
 * {
-  font-family: iosevka gothic extended, monospace, courier new, Courier, special;
+  font-family: source code pro, monospace, courier new, Courier, special;
   -webkit-tap-highlight-color: transparent;
 }
 .emoji {
@@ -460,8 +460,20 @@ td {
   word-wrap: break-word;
   overflow: auto;
 }
-#chatbox p {
-  margin: 5px;
+#chatbox p{
+    display: flex;
+    position: relative;
+    margin:5px;
+    animation: message-slide 1s cubic-bezier(0.25, 1, 1, 1);
+    flex-direction: column;
+}
+@keyframes message-slide {
+    0% {
+        right:25px;
+    }
+    100% {
+        right:0px;
+    }
 }
 #chatmsg {
   border-radius: 5px;
