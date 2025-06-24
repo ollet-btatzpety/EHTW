@@ -5,7 +5,7 @@ body {
   position: static;
 }
 * {
-  font-family: iosevka, monospace, courier new, Courier, special;
+  font-family: source code pro, monospace, courier new, Courier, special;
   -webkit-tap-highlight-color: transparent;
 }
 .emoji {
@@ -460,8 +460,20 @@ td {
   word-wrap: break-word;
   overflow: auto;
 }
-#chatbox p {
-  margin: 5px;
+#chatbox p{
+    display: flex;
+    position: relative;
+    margin:5px;
+    animation: message-slide 1s cubic-bezier(0.25, 1, 1, 1);
+    flex-direction: column;
+}
+@keyframes message-slide {
+    0% {
+        right:25px;
+    }
+    100% {
+        right:0px;
+    }
 }
 #chatmsg {
   border-radius: 5px;
@@ -713,7 +725,7 @@ td {
 @font-face {
   font-family: courier prime sans;
   font-weight: 700;
-  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2FCourier%20Prime%20Sans%20Bold%20Italic.ttf?v=1747372443897)
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2FCourier%20Prime%20Sans%20Bold.ttf?v=1747372444980)
 }
 @font-face {
   font-family: courier prime sans;
@@ -924,6 +936,10 @@ td {
   src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/install.com%2FLeagueMono-Bold.ttf?v=1747372491281)
 }
 @font-face {
+  font-family: monolity mono;
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/MONOLITY-MONO.TTF?v=1748091985959)
+}
+@font-face {
   font-family: ms mincho;
   src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/msmincho.ttc?v=1747444649172)
 }
@@ -953,6 +969,16 @@ td {
   font-style: italic;
   src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/NK57%20Monospace%20No%20Bd%20It.otf?v=1747446253577)
 }
+/*.*/
+@font-face {
+  font-family: neue montreal mono;
+  src: url(https://render.com/_next/static/media/a02a323226559df3-s.p.woff2)
+}
+@font-face {
+  font-family: neue montreal mono;
+  font-weight: 700;
+  src: url(https://render.com/_next/static/media/55dd12438d118bd8-s.p.woff2)
+}
 /* sf mono */
 @font-face {
   font-family: sf mono;
@@ -961,7 +987,7 @@ td {
 @font-face {
   font-family: sf mono;
   font-style: italic;
-  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/SFMonoBoldItalic.otf?v=1747445891246)
+  src: url(https://cdn.glitch.global/8a4d4824-c580-4631-ab70-07c416eefeae/SFMonoRegularItalic.otf?v=1747445907483)
 }
 @font-face {
   font-family: sf mono;
