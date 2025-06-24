@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "textwall server",
   "dependencies": {
-    "better-sqlite3": "^9.4.1",
+    "better-sqlite3-with-prebuilds": "^7.4.3",
     "body-parser": "^1.20.2",
     "cookie": "^0.6.0",
     "discord-oauth2": "^2.12.1",
