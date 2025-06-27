@@ -6,9 +6,7 @@ var maintenanceMode = 0;
 // Restart Server: Use the /stop command
 // Or go to /stopserver (You need the admin cookie)
 // Glitch restarts the server when it stops
-
 var fs = require("fs");
-var express = require("express");
 var http = require("http");
 var querystring = require("querystring");
 var url_parse = require("url");
@@ -21,6 +19,7 @@ var DiscordOauth2 = require("discord-oauth2");
 var fetch = require("node-fetch");
 var bodyParser = require("body-parser");
 var { Client, Intents } = require("discord.js");
+var express = require("express");
 
 var registersLimit = {};
 var chatsLimit = {}; 
