@@ -19,7 +19,7 @@ var DiscordOauth2 = require("discord-oauth2");
 var fetch = require("node-fetch");
 var bodyParser = require("body-parser");
 var { Client, Intents } = require("discord.js");
-var express = require("express");
+const express = require("express");
 
 var registersLimit = {};
 var chatsLimit = {}; 
